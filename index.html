@@ -119,15 +119,25 @@ button{font-family:'Inter',sans-serif;cursor:pointer}
 .exp-badge .n{font-size:1.4rem;font-weight:800;display:block;line-height:1.1}
 
 /* TRUST BAR */
-.tbar{background:var(--navy);padding:1.1rem 2rem}
-.tbar-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.tbar-i{display:flex;align-items:center;gap:.55rem;color:rgba(255,255,255,.8);font-size:.82rem;font-weight:500}
-.tbar-i i{color:var(--cyan-lt)}
+/* TRUST BAR - animated ticker */
+.tbar{background:linear-gradient(90deg,#081529 0%,#0b1d3a 40%,#0d2548 60%,#081529 100%);padding:0;overflow:hidden;position:relative;height:46px;border-top:1px solid rgba(11,188,212,.18);border-bottom:1px solid rgba(11,188,212,.18)}
+.tbar::before,.tbar::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.tbar::before{left:0;background:linear-gradient(90deg,#081529,transparent)}
+.tbar::after{right:0;background:linear-gradient(270deg,#081529,transparent)}
+.tbar-track{display:flex;align-items:center;height:100%;animation:ticker 28s linear infinite;width:max-content}
+.tbar-track:hover{animation-play-state:paused}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.tbar-i{display:inline-flex;align-items:center;gap:.55rem;color:rgba(255,255,255,.82);font-size:.8rem;font-weight:500;padding:0 2.2rem;white-space:nowrap;border-right:1px solid rgba(11,188,212,.2);height:100%}
+.tbar-i:last-child{border-right:none}
+.tbar-i i{color:var(--cyan-lt);font-size:.75rem}
+.tbar-dot{width:5px;height:5px;background:var(--cyan);border-radius:50%;opacity:.6;margin:0 .4rem;flex-shrink:0}
 
 /* SERVICE CARDS */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
-.scard{background:#fff;border:1px solid rgba(11,188,212,.12);border-radius:20px;overflow:hidden;transition:transform .4s cubic-bezier(.23,1,.32,1),box-shadow .4s,border-color .4s}
-.scard:hover{transform:translateY(-8px);box-shadow:0 24px 56px rgba(10,50,90,.16);border-color:rgba(11,188,212,.4)}
+.scard{background:#fff;border:1px solid rgba(11,188,212,.12);border-radius:20px;overflow:hidden;transition:transform .4s cubic-bezier(.23,1,.32,1),box-shadow .4s,border-color .4s;position:relative}
+.scard::before{content:'';position:absolute;inset:0;border-radius:20px;background:linear-gradient(135deg,rgba(11,188,212,.08),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none;z-index:0}
+.scard:hover::before{opacity:1}
+.scard:hover{transform:translateY(-8px);box-shadow:0 24px 56px rgba(10,50,90,.16),0 0 0 1px rgba(11,188,212,.35),0 0 30px rgba(11,188,212,.1);border-color:rgba(11,188,212,.4)}
 .sc-img{height:195px;overflow:hidden;position:relative}
 .sc-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.23,1,.32,1)}
 .scard:hover .sc-img img{transform:scale(1.06)}
@@ -142,9 +152,13 @@ button{font-family:'Inter',sans-serif;cursor:pointer}
 .sc-lnk:hover{gap:.75rem;color:var(--cyan)}
 
 /* EXPERIENCIA */
-.exp-bg{background:linear-gradient(135deg, var(--navy) 0%, var(--teal-d) 50%, var(--teal) 100%)}
-.exp-lay{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.exp-img{border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);height:440px;background:var(--teal-d)}
+.exp-bg{background:linear-gradient(135deg, #07152a 0%, #0a3048 35%, #085870 65%, #0a7590 100%);position:relative;overflow:hidden}
+.exp-bg::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(11,188,212,.15) 0%,transparent 65%);pointer-events:none;animation:expglow 8s ease-in-out infinite alternate}
+.exp-bg::after{content:'';position:absolute;bottom:-30%;left:10%;width:400px;height:400px;background:radial-gradient(circle,rgba(34,211,238,.08) 0%,transparent 65%);pointer-events:none}
+@keyframes expglow{0%{opacity:.7;transform:scale(1)}100%{opacity:1;transform:scale(1.15)}}
+.exp-lay{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.exp-img{border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 0 1px rgba(11,188,212,.25),0 0 60px rgba(11,188,212,.12);height:440px;background:var(--teal-d);position:relative}
+.exp-img::after{content:'';position:absolute;inset:0;border-radius:18px;box-shadow:inset 0 0 0 1px rgba(11,188,212,.2);pointer-events:none}
 .exp-img img{width:100%;height:100%;object-fit:cover}
 .exp-c h2{font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;margin-bottom:1rem}
 .exp-c p{color:rgba(255,255,255,.83);font-size:.94rem;line-height:1.78;margin-bottom:.85rem}
@@ -243,7 +257,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 /* RESPONSIVE */
 @media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr 1fr}.pg{grid-template-columns:1fr 1fr}.pg::before{display:none}}
 @media(max-width:768px){.navlinks{display:none}.burger{display:block}.hero-in{grid-template-columns:1fr}.hero-r{display:none}.exp-lay{grid-template-columns:1fr}.exp-img{height:260px}.ct-g{grid-template-columns:1fr;gap:2.5rem}.fr{grid-template-columns:1fr}.ft{grid-template-columns:1fr;gap:2rem}.pg{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr}}
-@media(max-width:520px){.grid3,.grid4{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.hero-btns{flex-direction:column}.tbar-in{flex-direction:column;align-items:flex-start;gap:.6rem}.exp-stats{gap:1.5rem}}
+@media(max-width:520px){.grid3,.grid4{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.hero-btns{flex-direction:column}.exp-stats{gap:1.5rem}}
 </style>
 </head>
 <body>
@@ -295,13 +309,24 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 </section>
 
 <div class="tbar">
-  <div class="tbar-in">
+  <div class="tbar-track">
     <div class="tbar-i"><i class="fas fa-anchor"></i> RPMN Certificado</div>
     <div class="tbar-i"><i class="fas fa-ship"></i> Importación de Embarcaciones</div>
     <div class="tbar-i"><i class="fas fa-leaf"></i> Permisos CONANP</div>
     <div class="tbar-i"><i class="fas fa-star"></i> Trámites SEMAR</div>
     <div class="tbar-i"><i class="fas fa-file-signature"></i> Permisos de Navegación</div>
     <div class="tbar-i"><i class="fas fa-map-marker-alt"></i> Quintana Roo</div>
+    <div class="tbar-i"><i class="fas fa-shield-alt"></i> 12+ Años de Experiencia</div>
+    <div class="tbar-i"><i class="fas fa-check-circle"></i> 1,200+ Trámites Completados</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="tbar-i"><i class="fas fa-anchor"></i> RPMN Certificado</div>
+    <div class="tbar-i"><i class="fas fa-ship"></i> Importación de Embarcaciones</div>
+    <div class="tbar-i"><i class="fas fa-leaf"></i> Permisos CONANP</div>
+    <div class="tbar-i"><i class="fas fa-star"></i> Trámites SEMAR</div>
+    <div class="tbar-i"><i class="fas fa-file-signature"></i> Permisos de Navegación</div>
+    <div class="tbar-i"><i class="fas fa-map-marker-alt"></i> Quintana Roo</div>
+    <div class="tbar-i"><i class="fas fa-shield-alt"></i> 12+ Años de Experiencia</div>
+    <div class="tbar-i"><i class="fas fa-check-circle"></i> 1,200+ Trámites Completados</div>
   </div>
 </div>
 
@@ -315,7 +340,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
     <div class="grid3">
       <article class="scard reveal" style="transition-delay:0.0s">
         <div class="sc-img">
-          <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=700&q=80&auto=format&fit=crop" alt="Puerto marítimo México - Registro Público Marítimo Nacional" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1504006833117-8886a355efbf?w=700&q=80&auto=format&fit=crop" alt="Puerto marítimo México - Registro Público Marítimo Nacional" loading="lazy"/>
           <div class="sc-ico"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxyZWN0IHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgZmlsbD0iIzBiMWQzYSIgcng9IjEwIi8+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjIyIiBmaWxsPSJub25lIiBzdHJva2U9IiMwYmJjZDQiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuNiIvPgo8dGV4dCB4PSIyNiIgeT0iMTMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMyMmQzZWUiIGZvbnQtc2l6ZT0iNS41IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZXR0ZXItc3BhY2luZz0iMSI+U0VNQVI8L3RleHQ+Cjx0ZXh0IHg9IjI2IiB5PSIyMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiIgZm9udC1zaXplPSI0IiBmb250LWZhbWlseT0iQXJpYWwiIGxldHRlci1zcGFjaW5nPSIuNSI+UkVHSVNUUk88L3RleHQ+Cjx0ZXh0IHg9IjI2IiB5PSIyNS41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIiBmb250LXNpemU9IjQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgbGV0dGVyLXNwYWNpbmc9Ii41Ij5Qw5pCTElDTzwvdGV4dD4KPHRleHQgeD0iMjYiIHk9IjMxIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIiBmb250LXNpemU9IjQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgbGV0dGVyLXNwYWNpbmc9Ii4zIj5NQVLDjVRJTU88L3RleHQ+Cjx0ZXh0IHg9IjI2IiB5PSIzNi41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMGJiY2Q0IiBmb250LXNpemU9IjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9ImJvbGQiIGxldHRlci1zcGFjaW5nPSIuNSI+UlBNTjwvdGV4dD4KPGNpcmNsZSBjeD0iMjYiIGN5PSI0MyIgcj0iMi41IiBmaWxsPSIjZjU5ZTBiIi8+Cjwvc3ZnPg==" alt="badge"/></div>
         </div>
         <div class="sc-body">
@@ -348,7 +373,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
       </article>
       <article class="scard reveal" style="transition-delay:0.12s">
         <div class="sc-img">
-          <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=700&q=80&auto=format&fit=crop" alt="Arrecife de coral México - Permisos CONANP Áreas Naturales Protegidas" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=700&q=80&auto=format&fit=crop" alt="Arrecife de coral México - Permisos CONANP Áreas Naturales Protegidas" loading="lazy"/>
           <div class="sc-ico"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxyZWN0IHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgZmlsbD0iIzFhNGEyZSIgcng9IjEwIi8+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjIwIiBmaWxsPSJub25lIiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIuNSIvPgo8ZWxsaXBzZSBjeD0iMjYiIGN5PSIyOCIgcng9IjEwIiByeT0iMTMiIGZpbGw9IiMxNTgwM2QiIG9wYWNpdHk9Ii45Ii8+CjxlbGxpcHNlIGN4PSIyMCIgY3k9IjI2IiByeD0iOCIgcnk9IjEwIiBmaWxsPSIjMTZhMzRhIiBvcGFjaXR5PSIuOCIvPgo8ZWxsaXBzZSBjeD0iMzIiIGN5PSIyNiIgcng9IjgiIHJ5PSIxMCIgZmlsbD0iIzE2YTM0YSIgb3BhY2l0eT0iLjgiLz4KPGVsbGlwc2UgY3g9IjI2IiBjeT0iMjIiIHJ4PSI5IiByeT0iMTEiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9Ii44NSIvPgo8bGluZSB4MT0iMjYiIHkxPSIzNiIgeDI9IjI2IiB5Mj0iNDQiIHN0cm9rZT0iIzRhZGU4MCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjI2IiB5PSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzRhZGU4MCIgZm9udC1zaXplPSI0LjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9ImJvbGQiIGxldHRlci1zcGFjaW5nPSIuNSI+Q09OQU5QPC90ZXh0Pgo8dGV4dCB4PSIyNiIgeT0iNDkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM4NmVmYWMiIGZvbnQtc2l6ZT0iMy41IiBmb250LWZhbWlseT0iQXJpYWwiPsOBUkVBIE5BVFVSQUw8L3RleHQ+Cjwvc3ZnPg==" alt="badge"/></div>
         </div>
         <div class="sc-body">
@@ -359,7 +384,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
       </article>
       <article class="scard reveal" style="transition-delay:0.16s">
         <div class="sc-img">
-          <img src="https://images.unsplash.com/photo-1536408157170-d33b9b98ff94?w=700&q=80&auto=format&fit=crop" alt="Buque de la Marina Mexicana - Trámites SEMAR" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1541456135-a25065517835?w=700&q=80&auto=format&fit=crop" alt="Buque de la Marina Mexicana - Trámites SEMAR" loading="lazy"/>
           <div class="sc-ico"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxyZWN0IHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgZmlsbD0iIzBiMWQzYSIgcng9IjEwIi8+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjIiIHI9IjE0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwYmJjZDQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjIiIHI9IjExIiBmaWxsPSIjMGQyNTQ4Ii8+CjxwYXRoIGQ9Ik0yNiAxMiBMMjggMTkgTDM1IDE5IEwyOSAyNCBMMzEgMzEgTDI2IDI2IEwyMSAzMSBMMjMgMjQgTDE3IDE5IEwyNCAxOSBaIiBmaWxsPSIjZjU5ZTBiIi8+CjxsaW5lIHgxPSIyMCIgeTE9IjM3IiB4Mj0iMzIiIHkyPSIzNyIgc3Ryb2tlPSIjMGJiY2Q0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8cGF0aCBkPSJNMTggMzcgUTI2IDQ0IDM0IDM3IiBzdHJva2U9IiMwYmJjZDQiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CjxsaW5lIHgxPSIyNiIgeTE9IjMwIiB4Mj0iMjYiIHkyPSIzNyIgc3Ryb2tlPSIjMGJiY2Q0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8dGV4dCB4PSIyNiIgeT0iNDgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMyMmQzZWUiIGZvbnQtc2l6ZT0iNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iYm9sZCIgbGV0dGVyLXNwYWNpbmc9IjEiPlNFTUFSPC90ZXh0Pgo8L3N2Zz4=" alt="badge"/></div>
         </div>
         <div class="sc-body">
@@ -411,7 +436,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
   <div class="wrap">
     <div class="exp-lay reveal">
       <div class="exp-img">
-        <img src="https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Marina con embarcaciones al atardecer" style="width:100%;height:100%;object-fit:cover">
+        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&q=85&auto=format&fit=crop" alt="Marina con embarcaciones al atardecer" style="width:100%;height:100%;object-fit:cover;filter:brightness(1.15) saturate(1.3) contrast(1.05)">
       </div>
       <div class="exp-c">
         <div class="lbl lbl-w"><i class="fas fa-star"></i> Nuestra Experiencia</div>
@@ -421,7 +446,6 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         <div class="exp-stats">
           <div class="es"><div class="n">12+</div><div class="l">Años de experiencia</div></div>
           <div class="es"><div class="n">1,200+</div><div class="l">Trámites completados</div></div>
-          <div class="es"><div class="n">98%</div><div class="l">Tasa de éxito</div></div>
           <div class="es"><div class="n">15+</div><div class="l">Puertos atendidos</div></div>
         </div>
       </div>
@@ -675,7 +699,7 @@ es:{
   expP1:'Somos especialistas en la gestión integral de trámites administrativos para embarcaciones en México.',
   expP2:'Nuestra experiencia nos permite ofrecer tiempos de respuesta rápidos y asesoría personalizada.',
   expBtn:'<i class="fas fa-paper-plane"></i> Iniciar Trámite',
-  stats:[{n:'12+',l:'Años de Experiencia'},{n:'1,200+',l:'Trámites Gestionados'},{n:'98%',l:'Clientes Satisfechos'},{n:'15+',l:'Puertos Atendidos'}],
+  stats:[{n:'12+',l:'Años de Experiencia'},{n:'1,200+',l:'Trámites Gestionados'},{n:'15+',l:'Puertos Atendidos'}],
   tramLbl:'Trámites Detallados',
   tramH2:'Servicios <span style="color:var(--cyan-lt)">especializados</span> por área',
   tramSub:'Selecciona el servicio que necesitas para ver los trámites específicos disponibles.',
@@ -749,7 +773,7 @@ en:{
   expP1:'We are specialists in comprehensive administrative procedure management for vessels in Mexico, working with SEMAR, CONANP, RPMN and Port Authorities throughout Quintana Roo.',
   expP2:'Our experience allows us to offer fast response times, personalized advice and punctual follow-up on every procedure.',
   expBtn:'<i class="fas fa-paper-plane"></i> Start a Procedure',
-  stats:[{n:'12+',l:'Years of Experience'},{n:'1,200+',l:'Procedures Completed'},{n:'98%',l:'Satisfied Clients'},{n:'15+',l:'Ports Served'}],
+  stats:[{n:'12+',l:'Years of Experience'},{n:'1,200+',l:'Procedures Completed'},{n:'15+',l:'Ports Served'}],
   tramLbl:'Detailed Procedures',
   tramH2:'<span style="color:var(--cyan-lt)">Specialized</span> services by area',
   tramSub:'Select the service you need to see the specific procedures available.',
