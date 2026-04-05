@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Soporte y Consultoría Marítima | Trámites Náuticos en México</title>
+<meta name="description" content="Especialistas en trámites administrativos náuticos: RPMN, SEMAR, CONANP, importación de embarcaciones y permisos de navegación en Quintana Roo, México."/>
+<meta name="keywords" content="trámites náuticos México, RPMN, SEMAR, CONANP, importación yates, matrícula embarcaciones, gestión marítima, Quintana Roo, Cancún"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://soportemaritimo.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Soporte y Consultoría Marítima | Trámites Náuticos en México"/>
+<meta property="og:description" content="Gestión profesional de trámites ante SEMAR, CONANP y RPMN en Quintana Roo."/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Soporte y Consultoría Marítima","url":"https://soportemaritimo.mx","telephone":"+529981234567","address":{"@type":"PostalAddress","addressLocality":"Cancún","addressRegion":"Quintana Roo","addressCountry":"MX"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root {
+  /* Paleta de colores optimizada - Azul Marino (autoridad) + Cian/Turquesa (marítimo) */
+  --navy:    #0b1d3a;
+  --navy2:   #0d2548;
+  --teal-d:  #0a4a5a;
+  --teal:    #0e7090;
+  --cyan:    #0bbcd4;  /* Color de acento principal */
+  --cyan-lt: #22d3ee;
+  --gold:    #f59e0b;
+  --orange:  #fb923c;  /* Nuevo: para CTAs de alta visibilidad */
+  --white:   #ffffff;
+  --off:     #f0f7f8;
+  --off2:    #dff0f3;
+  --text:    #0f2535;
+  --muted:   #3d6070;
+  --muted2:  #6a9aaa;
+  --cborder: rgba(11,188,212,.15);
+  --shadow:  0 4px 24px rgba(10,50,70,.10);
+  --shad-lg: 0 16px 48px rgba(10,50,70,.18);
+  /* Sistema de colores de estatus */
+  --status-verde: #10b981;    /* Terminado */
+  --status-amarillo: #f59e0b; /* En proceso */
+  --status-rojo: #ef4444;     /* Pendiente/Urgente */
+  /* Hero gradient */
+  --hero-g: linear-gradient(120deg, #0b1d3a 0%, #0d3a60 30%, #0a7090 65%, #0bbcd4 100%);
+  --btn-g:  linear-gradient(135deg, #0d5c7a, #0e8fab);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--off);color:var(--text);overflow-x:hidden;line-height:1.6}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.2}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font-family:'Inter',sans-serif;cursor:pointer}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,188,212,.12);height:66px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 2px 20px rgba(10,50,70,.12)}
+.nav-logo{display:flex;align-items:center;gap:.65rem;font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem}
+.nav-icon{width:38px;height:38px;background:var(--hero-g);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;flex-shrink:0}
+.nl1{color:var(--navy)}
+.nl2{color:var(--teal);font-size:.7rem;font-family:'Inter',sans-serif;font-weight:500;display:block}
+.navlinks{display:flex;align-items:center;gap:1.8rem}
+.navlinks a{color:var(--muted);font-size:.87rem;font-weight:500;transition:color .2s}
+.navlinks a:hover{color:var(--navy)}
+.btn-nav{background:var(--btn-g);color:#fff!important;padding:.5rem 1.3rem;border-radius:8px;font-weight:600!important;box-shadow:0 3px 12px rgba(11,188,212,.3);transition:all .2s!important}
+.btn-nav:hover{opacity:.9;transform:translateY(-1px)}
+.burger{display:none;background:none;border:none;color:var(--navy);font-size:1.4rem;padding:.3rem}
+.mob{display:none;flex-direction:column;position:fixed;top:66px;left:0;right:0;z-index:899;background:#fff;border-bottom:2px solid var(--cyan);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.mob.open{display:flex}
+.mob a{padding:1rem 2rem;color:var(--text);font-weight:500;border-bottom:1px solid var(--off2)}
+.mob a:last-child{background:var(--btn-g);color:#fff;font-weight:700}
+
+/* UTILS */
+.wrap{max-width:1200px;margin:0 auto;padding:0 2rem}
+.section{padding:6rem 0}
+.lbl{display:inline-flex;align-items:center;gap:.4rem;background:rgba(11,188,212,.09);border:1px solid rgba(11,188,212,.22);color:var(--teal);padding:.28rem .85rem;border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.9rem}
+.lbl-w{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
+.h2{font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.02em;color:var(--navy);margin-bottom:.9rem}
+.h2-w{color:#fff}
+.sub{color:var(--muted);font-size:1rem;line-height:1.75;max-width:580px}
+.sub-w{color:rgba(255,255,255,.82)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(11,188,212,.25),transparent)}
+.cards-bg{background:linear-gradient(180deg,var(--off) 0%,#e8f4f7 100%)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s,transform .65s}
+.reveal.on{opacity:1;transform:none}
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--navy)!important;padding:.88rem 2rem;border-radius:9px;font-weight:700;font-size:.95rem;border:none;box-shadow:0 2px 14px rgba(0,0,0,.14);transition:all .25s}
+.btn-primary:hover{background:var(--off);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#fff;padding:.88rem 2rem;border-radius:9px;font-weight:600;font-size:.95rem;border:2px solid rgba(255,255,255,.55);transition:all .25s}
+.btn-outline:hover{background:rgba(255,255,255,.15);border-color:#fff;transform:translateY(-2px)}
+/* CTAs mejorados con colores de alto contraste */
+.btn-gold{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--navy);padding:.88rem 2rem;border-radius:9px;font-weight:700;font-size:.95rem;border:none;box-shadow:0 4px 16px rgba(245,158,11,.3);transition:all .25s}
+.btn-gold:hover{filter:brightness(1.07);transform:translateY(-2px)}
+.btn-orange{display:inline-flex;align-items:center;gap:.5rem;background:var(--orange);color:#fff;padding:.95rem 2.2rem;border-radius:10px;font-weight:700;font-size:1rem;border:none;box-shadow:0 6px 20px rgba(251,146,60,.35);transition:all .25s}
+.btn-orange:hover{filter:brightness(1.08);transform:translateY(-3px);box-shadow:0 8px 24px rgba(251,146,60,.45)}
+.btn-teal{display:inline-flex;align-items:center;gap:.5rem;background:var(--btn-g);color:#fff;padding:.88rem 2rem;border-radius:9px;font-weight:600;font-size:.95rem;border:none;box-shadow:0 4px 16px rgba(11,188,212,.3);transition:all .25s}
+.btn-teal:hover{opacity:.92;transform:translateY(-2px)}
+
+/* HERO */
+.hero{min-height:100vh;padding-top:66px;background:var(--hero-g);position:relative;overflow:hidden;display:flex;align-items:center}
+.hero-bg-img{position:absolute;inset:0;z-index:0}
+.hero-bg-img img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-bg-img::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(11,29,58,.92) 0%,rgba(13,37,72,.85) 35%,rgba(10,50,90,.70) 60%,rgba(10,50,80,.55) 100%)}
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:70px;background:var(--off);clip-path:ellipse(55% 100% at 50% 100%)}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:4rem 2rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;padding:.38rem 1rem;border-radius:100px;font-size:.74rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:1.3rem}
+.badge::before{content:'';width:7px;height:7px;background:var(--cyan-lt);border-radius:50%;animation:bl 2s infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:1.2rem;line-height:1.1;text-shadow:0 2px 20px rgba(0,0,0,.2)}
+.hero h1 .gold{color:var(--gold)}
+.hero-sub{color:rgba(255,255,255,.87);font-size:1rem;line-height:1.75;margin-bottom:2.2rem;max-width:490px}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.hero-note{display:flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.72);font-size:.8rem}
+.hero-note i{color:var(--cyan-lt)}
+.dots{display:flex;align-items:center;gap:.4rem;margin-bottom:1.4rem}
+.dot{width:13px;height:13px;border-radius:50%}
+.dot-g{background:var(--status-verde)}.dot-y{background:var(--status-amarillo)}.dot-r{background:var(--status-rojo)}
+.dots span{font-size:.79rem;color:rgba(255,255,255,.8);font-weight:500;margin-left:.3rem}
+
+/* HERO PHOTO CARD */
+.hcard{background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.22);border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.hcard-img{height:290px;overflow:hidden;position:relative;background:var(--teal-d)}
+.hcard-img img{width:100%;height:100%;object-fit:cover;display:block}
+.hcard-foot{padding:1.1rem 1.4rem;display:flex;align-items:center;justify-content:space-between}
+.hcard-foot h4{font-family:'Playfair Display',serif;font-size:.93rem;font-weight:700;color:#fff;margin-bottom:.18rem}
+.hcard-foot p{color:rgba(255,255,255,.68);font-size:.76rem}
+.exp-badge{background:rgba(16,185,129,.9);color:#fff;padding:.45rem .9rem;border-radius:9px;font-size:.8rem;font-weight:700;white-space:nowrap;text-align:center}
+.exp-badge .n{font-size:1.4rem;font-weight:800;display:block;line-height:1.1}
+
+/* TRUST BAR */
+.tbar{background:#fff;padding:1.1rem 0;border-bottom:1px solid var(--cborder)}
+.tbar-in{max-width:1100px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-around;align-items:center;gap:2rem;flex-wrap:wrap}
+.tbar-item{display:flex;align-items:center;gap:.6rem;color:var(--muted);font-size:.82rem;font-weight:600}
+.tbar-item i{color:var(--cyan);font-size:1.1rem}
+
+/* NUEVA SECCIÓN: SISTEMA DE ESTATUS DE TRÁMITES */
+.status-guide{background:linear-gradient(135deg, rgba(11,29,58,.97), rgba(14,112,144,.95));padding:3rem 0;margin-top:-1px}
+.status-guide .wrap{max-width:1000px}
+.status-header{text-align:center;margin-bottom:2.5rem}
+.status-header h3{color:#fff;font-size:1.6rem;font-weight:700;margin-bottom:.6rem}
+.status-header p{color:rgba(255,255,255,.75);font-size:.95rem}
+.status-cards{display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.5rem}
+.status-card{background:rgba(255,255,255,.95);border-radius:12px;padding:1.5rem;box-shadow:0 4px 16px rgba(0,0,0,.15);transition:transform .25s}
+.status-card:hover{transform:translateY(-4px)}
+.status-card-header{display:flex;align-items:center;gap:.8rem;margin-bottom:.9rem}
+.status-indicator{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.status-indicator.verde{background:rgba(16,185,129,.12);color:var(--status-verde)}
+.status-indicator.amarillo{background:rgba(245,158,11,.12);color:var(--status-amarillo)}
+.status-indicator.rojo{background:rgba(239,68,68,.12);color:var(--status-rojo)}
+.status-card h4{font-size:1rem;font-weight:700;color:var(--navy);margin:0}
+.status-card p{color:var(--muted);font-size:.87rem;line-height:1.6}
+
+/* SERVICIOS - MEJORADO CON ICONOS DIFERENCIADORES */
+.scard{background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:all .3s;border:2px solid transparent;position:relative}
+.scard:hover{box-shadow:var(--shad-lg);border-color:var(--cyan);transform:translateY(-6px)}
+.scard-img{height:210px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--teal-d),var(--teal))}
+.scard-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.scard:hover .scard-img img{transform:scale(1.05)}
+/* Iconos institucionales distintivos */
+.scard-badge{position:absolute;top:1rem;left:1rem;width:54px;height:54px;background:rgba(255,255,255,.95);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:2}
+.scard-badge.rpmn{color:#0a4a5a}
+.scard-badge.semar{color:#0e7090}
+.scard-badge.conanp{color:#10b981}
+.scard-badge.import{color:#f59e0b}
+.scard-badge.translate{color:#6366f1}
+.scard-badge.inspect{color:#ef4444}
+.sc-body{padding:1.6rem}
+.sc-body h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
+.sc-body h3 i{color:var(--cyan);font-size:1.1rem}
+.sc-body p{color:var(--muted);font-size:.88rem;line-height:1.65;margin-bottom:1.2rem}
+.sc-lnk{display:inline-flex;align-items:center;gap:.4rem;color:var(--cyan);font-weight:600;font-size:.85rem;transition:gap .2s}
+.sc-lnk:hover{gap:.7rem}
+
+/* EXPERIENCIA - Sección con imagen de oficina SEMAR */
+.exp{background:var(--hero-g);color:#fff;position:relative;overflow:hidden}
+.exp::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.exp-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.exp-c h2{font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:800;margin-bottom:1.2rem;line-height:1.15}
+.exp-c p{color:rgba(255,255,255,.85);margin-bottom:1rem;line-height:1.75;font-size:.97rem}
+.exp-c .btn-primary{margin-top:1.2rem}
+.exp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0}
+.es{text-align:center;padding:1.2rem;background:rgba(255,255,255,.08);border-radius:12px;border:1px solid rgba(255,255,255,.12);transition:all .25s}
+.es:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.es .n{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:800;color:var(--cyan-lt);display:block;margin-bottom:.25rem}
+.es .l{font-size:.82rem;color:rgba(255,255,255,.75);font-weight:600}
+.exp-img{border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.15);background:rgba(0,0,0,.2)}
+.exp-img img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(1.05)}
+
+/* TRÁMITES */
+.tram-top{text-align:center;max-width:700px;margin:0 auto 3rem}
+.tabs{display:flex;justify-content:center;gap:.8rem;margin-bottom:3rem;flex-wrap:wrap}
+.tb{background:#fff;border:2px solid var(--cborder);color:var(--muted);padding:.7rem 1.8rem;border-radius:10px;font-weight:600;font-size:.88rem;transition:all .25s;cursor:pointer}
+.tb:hover,.tb.active{background:var(--cyan);color:#fff;border-color:var(--cyan);box-shadow:0 4px 12px rgba(11,188,212,.25)}
+.tram-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
+.tc{background:#fff;border-radius:14px;padding:2rem;box-shadow:var(--shadow);transition:all .3s;border-left:4px solid var(--cyan)}
+.tc:hover{box-shadow:var(--shad-lg);transform:translateY(-4px)}
+.tc-head{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem}
+.tc-icon{width:52px;height:52px;background:rgba(11,188,212,.1);border-radius:11px;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:1.5rem;flex-shrink:0}
+.tc h4{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.tc-meta{font-size:.75rem;color:var(--muted2);display:flex;align-items:center;gap:.4rem}
+.tc p{color:var(--muted);font-size:.87rem;line-height:1.65;margin-bottom:1rem}
+.tc ul{list-style:none;padding:0;margin:0 0 1.2rem 0}
+.tc ul li{padding:.4rem 0 .4rem 1.6rem;color:var(--muted);font-size:.84rem;position:relative}
+.tc ul li::before{content:'✓';position:absolute;left:0;color:var(--cyan);font-weight:700;font-size:.9rem}
+.tc-btn{width:100%;background:var(--btn-g);color:#fff;padding:.75rem;border-radius:8px;font-weight:600;font-size:.88rem;border:none;transition:all .25s}
+.tc-btn:hover{opacity:.9;transform:translateY(-2px)}
+
+/* BENEFICIOS */
+.ben{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 50%,var(--teal-d) 100%);color:#fff;position:relative;overflow:hidden}
+.ben::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.ben-in{position:relative;text-align:center}
+.ben-top{max-width:700px;margin:0 auto 3rem}
+.ben-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+.bc{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:2rem;transition:all .3s;text-align:left}
+.bc:hover{background:rgba(255,255,255,.12);transform:translateY(-4px)}
+.bc-icon{width:56px;height:56px;background:rgba(11,188,212,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--cyan-lt);font-size:1.7rem;margin-bottom:1.2rem}
+.bc h3{font-size:1.1rem;font-weight:700;margin-bottom:.7rem}
+.bc p{color:rgba(255,255,255,.78);font-size:.88rem;line-height:1.7}
+
+/* PROCESO */
+.proc-top{text-align:center;max-width:700px;margin:0 auto 3rem}
+.proc-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;position:relative}
+.ps{background:#fff;border-radius:14px;padding:1.8rem;box-shadow:var(--shadow);position:relative;transition:all .3s}
+.ps:hover{box-shadow:var(--shad-lg);transform:translateY(-4px)}
+.ps-num{width:44px;height:44px;background:var(--btn-g);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;margin-bottom:1rem;box-shadow:0 4px 12px rgba(11,188,212,.25)}
+.ps h4{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.6rem}
+.ps p{color:var(--muted);font-size:.86rem;line-height:1.65}
+
+/* CONTACTO - CTA MÁS FUERTE */
+.ct{padding:5rem 0;background:linear-gradient(180deg,var(--off) 0%,#fff 100%)}
+.ct-top{text-align:center;max-width:650px;margin:0 auto 3rem}
+.ct-g{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:start}
+.ct-info{background:#fff;border-radius:16px;padding:2rem;box-shadow:var(--shadow);border-top:4px solid var(--cyan)}
+.ci{margin-bottom:1.8rem;padding-bottom:1.8rem;border-bottom:1px solid var(--off2)}
+.ci:last-child{border:none;margin:0;padding:0}
+.ci-icon{width:46px;height:46px;background:rgba(11,188,212,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:1.3rem;margin-bottom:.8rem}
+.ci .lb{font-size:.78rem;color:var(--muted2);font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.3rem;display:block}
+.ci .v{font-size:1.05rem;color:var(--navy);font-weight:600}
+.ci .v a{color:var(--cyan);transition:color .2s}
+.ci .v a:hover{color:var(--teal)}
+.fc{background:#fff;border-radius:16px;padding:2.5rem;box-shadow:var(--shadow);border-top:4px solid var(--orange)}
+.fc h3{font-size:1.5rem;font-weight:700;color:var(--navy);margin-bottom:.6rem}
+.fs{color:var(--muted);margin-bottom:1.8rem;font-size:.92rem}
+.fg{margin-bottom:1.4rem}
+.fg label{display:block;font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:.4rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:.8rem 1rem;border:2px solid var(--cborder);border-radius:8px;font-size:.9rem;font-family:'Inter',sans-serif;transition:all .2s;background:#fff}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(11,188,212,.1)}
+.fg textarea{resize:vertical;min-height:110px}
+.fg.err input,.fg.err select,.fg.err textarea{border-color:#ef4444}
+.ferr{color:#ef4444;font-size:.78rem;margin-top:.3rem;display:none}
+.fg.err .ferr{display:block}
+/* CTA de envío mejorado con color naranja de alto contraste */
+.fc .btn-orange{width:100%;justify-content:center;font-size:1.05rem}
+.fc > p{text-align:center;margin-top:1.2rem;font-size:.78rem;color:var(--muted2)}
+.fc > p a{color:var(--cyan);font-weight:600}
+
+/* FOOTER */
+.foot{background:var(--navy);color:rgba(255,255,255,.8);padding:3.5rem 0 1.5rem}
+.foot-in{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:3rem}
+.fd h4{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:.7rem}
+.fd p{font-size:.87rem;line-height:1.65;margin-bottom:1.2rem}
+.soc{display:flex;gap:.7rem}
+.soc a{width:38px;height:38px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--cyan-lt);font-size:1rem;transition:all .25s}
+.soc a:hover{background:var(--cyan);color:#fff;transform:translateY(-3px)}
+.fco h5{font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.9rem;text-transform:uppercase;letter-spacing:.05em}
+.fco ul{list-style:none}
+.fco ul li{margin-bottom:.6rem}
+.fco ul li a{color:rgba(255,255,255,.75);font-size:.85rem;transition:color .2s}
+.fco ul li a:hover{color:var(--cyan-lt)}
+.fb{border-top:1px solid rgba(255,255,255,.1);margin-top:2.5rem;padding-top:1.8rem;text-align:center}
+.fb p{font-size:.82rem;color:rgba(255,255,255,.6)}
+
+/* TOAST */
+#toast{position:fixed;bottom:2rem;right:2rem;z-index:999;background:var(--cyan);color:#fff;padding:1.1rem 1.8rem;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.25);display:none;align-items:center;gap:.8rem;animation:slideIn .4s}
+#toast.show{display:flex}
+@keyframes slideIn{from{transform:translateX(120%)}to{transform:translateX(0)}}
+#toast i{font-size:1.3rem}
+#toast p{font-size:.9rem;font-weight:600}
+#toast span{display:block;font-size:.78rem;opacity:.85;font-weight:400}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .hero-in,.exp-in{grid-template-columns:1fr;gap:2.5rem}
+  .hero-in{padding:3rem 2rem 4rem}
+  .hcard{max-width:450px;margin:0 auto}
+  .exp-img{max-width:500px;margin:0 auto}
+  .ct-g{grid-template-columns:1fr}
+  .foot-in{grid-template-columns:1fr 1fr;gap:2.5rem}
+}
+@media(max-width:768px){
+  .navlinks{display:none}
+  .burger{display:block}
+  .hero h1{font-size:2rem}
+  .section{padding:4rem 0}
+  .tabs{gap:.5rem}
+  .tb{padding:.6rem 1.2rem;font-size:.82rem}
+  .tram-grid,.ben-grid,.proc-steps{grid-template-columns:1fr}
+  .exp-stats{grid-template-columns:1fr}
+  .foot-in{grid-template-columns:1fr;gap:2rem}
+  .status-cards{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .wrap{padding:0 1.2rem}
+  #nav{padding:0 1.2rem}
+  .hero-in{padding:2rem 1.2rem 3rem}
+  .hero-btns{flex-direction:column}
+  .btn-primary,.btn-outline,.btn-gold,.btn-orange,.btn-teal{width:100%;justify-content:center}
+  #toast{right:1rem;left:1rem;bottom:1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+<a href="#" class="nav-logo">
+<div class="nav-icon"><i class="fas fa-anchor"></i></div>
+<div>
+<span class="nl1">Soporte Marítimo</span>
+<span class="nl2">Consultoría Náutica</span>
+</div>
+</a>
+<div class="navlinks">
+<a href="#servicios">Servicios</a>
+<a href="#tramites">Trámites</a>
+<a href="#proceso">Proceso</a>
+<a href="#contacto" class="btn-nav">Contactar</a>
+<button id="lang-btn" onclick="toggleLang()" style="background:none;border:1px solid var(--cborder);color:var(--muted);padding:.4rem .8rem;border-radius:6px;font-size:.8rem;font-weight:600;display:flex;align-items:center;gap:.3rem;transition:all .2s">
+<span class="flag">🇺🇸</span> EN
+</button>
+</div>
+<button class="burger" onclick="document.querySelector('.mob').classList.toggle('open')">
+<i class="fas fa-bars"></i>
+</button>
+</nav>
+<div class="mob">
+<a href="#servicios">Servicios</a>
+<a href="#tramites">Trámites</a>
+<a href="#proceso">Proceso</a>
+<a href="#contacto">Contactar</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-bg-img">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230b1d3a'/%3E%3Cstop offset='50%25' style='stop-color:%230a4a5a'/%3E%3Cstop offset='100%25' style='stop-color:%230bbcd4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23g)'/%3E%3C/svg%3E" alt="Hero background"/>
+</div>
+<div class="hero-in">
+<div>
+<div class="badge">Especialistas certificados</div>
+<div class="dots">
+<span class="dot dot-g"></span>
+<span class="dot dot-y"></span>
+<span class="dot dot-r"></span>
+<span>Sistema de estatus de trámites</span>
+</div>
+<h1>Gestión profesional de <span class="gold">trámites náuticos</span> en México</h1>
+<p class="hero-sub">Simplificamos todos tus procesos administrativos marítimos ante SEMAR, CONANP y RPMN. Expertos en importación, matriculación y certificaciones náuticas en Quintana Roo.</p>
+<div class="hero-btns">
+<a href="#contacto" class="btn-orange">
+<i class="fas fa-rocket"></i>
+Cotizar Trámite Ahora
+</a>
+<a href="#tramites" class="btn-outline">
+<i class="fas fa-list-check"></i>
+Ver Servicios
+</a>
+</div>
+<div class="hero-note">
+<i class="fas fa-shield-check"></i>
+<span>100% legal y cumplimiento normativo garantizado</span>
+</div>
+</div>
+<div class="hcard">
+<div class="hcard-img">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230a4a5a'/%3E%3Cstop offset='100%25' style='stop-color:%230e7090'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='400' fill='url(%23bg)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='24' opacity='0.3'%3EOficina SEMAR%3C/text%3E%3C/svg%3E" alt="Oficina de gestión marítima"/>
+</div>
+<div class="hcard-foot">
+<div>
+<h4>Gestión Marítima Profesional</h4>
+<p>Quintana Roo, México</p>
+</div>
+<div class="exp-badge">
+<span class="n">15+</span>
+Años
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="tbar">
+<div class="tbar-in">
+<div class="tbar-item"><i class="fas fa-certificate"></i> <span>Agencia certificada SEMAR</span></div>
+<div class="tbar-item"><i class="fas fa-clock"></i> <span>Respuesta en 24 horas</span></div>
+<div class="tbar-item"><i class="fas fa-users"></i> <span>+500 clientes satisfechos</span></div>
+<div class="tbar-item"><i class="fas fa-thumbs-up"></i> <span>98% tasa de éxito</span></div>
+</div>
+</div>
+
+<!-- NUEVA SECCIÓN: SISTEMA DE ESTATUS -->
+<section class="status-guide">
+<div class="wrap">
+<div class="status-header">
+<h3>Nuestro Sistema de Seguimiento</h3>
+<p>Conoce en todo momento el estatus de tu trámite con nuestro código de colores</p>
+</div>
+<div class="status-cards reveal">
+<div class="status-card">
+<div class="status-card-header">
+<div class="status-indicator verde">
+<i class="fas fa-check-circle"></i>
+</div>
+<h4>Verde - Terminado</h4>
+</div>
+<p>Tu trámite ha sido completado exitosamente. Documentos listos para entrega o ya entregados.</p>
+</div>
+<div class="status-card">
+<div class="status-card-header">
+<div class="status-indicator amarillo">
+<i class="fas fa-clock"></i>
+</div>
+<h4>Amarillo - En Proceso</h4>
+</div>
+<p>Tu trámite está siendo gestionado activamente. Te mantendremos informado de cada avance.</p>
+</div>
+<div class="status-card">
+<div class="status-card-header">
+<div class="status-indicator rojo">
+<i class="fas fa-exclamation-circle"></i>
+</div>
+<h4>Rojo - Requiere Atención</h4>
+</div>
+<p>Necesitamos información o documentación adicional de tu parte para continuar.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="section cards-bg">
+<div class="wrap">
+<div class="reveal">
+<span class="lbl"><i class="fas fa-ship"></i> Servicios especializados</span>
+<h2 class="h2">Servicios <span style="color:var(--cyan)">por área</span></h2>
+<p class="sub">Cobertura completa para todas tus necesidades de gestión marítima y náutica en México</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2rem;margin-top:3rem">
+<article class="scard reveal">
+<div class="scard-img">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230a4a5a'/%3E%3Cstop offset='100%25' style='stop-color:%230e7090'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='280' fill='url(%23s1)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='48' opacity='0.2'%3E⚓%3C/text%3E%3C/svg%3E" alt="RPMN"/>
+<div class="scard-badge rpmn">
+<i class="fas fa-anchor"></i>
+</div>
+</div>
+<div class="sc-body">
+<h3>RPMN</h3>
+<p>Registro Público Marítimo Nacional: inscripción, renovación y modificación de embarcaciones menores y mayores.</p>
+<a href="#contacto" class="sc-lnk">Ver trámites <i class="fas fa-arrow-right"></i></a>
+</div>
+</article>
+<article class="scard reveal">
+<div class="scard-img">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Cdefs%3E%3ClinearGradient id='s2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230d3a60'/%3E%3Cstop offset='100%25' style='stop-color:%230bbcd4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='280' fill='url(%23s2)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='48' opacity='0.2'%3E⛵%3C/text%3E%3C/svg%3E" alt="Importación"/>
+<div class="scard-badge import">
+<i class="fas fa-ship"></i>
+</div>
+</div>
+<div class="sc-body">
+<h3>Importación</h3>
+<p>Importación temporal de embarcaciones extranjeras. Cumplimiento normativo completo.</p>
+<a href="#contacto" class="sc-lnk">Ver trámites <i class="fas fa-arrow-right"></i></a>
+</div>
+</article>
+<article class="scard reveal">
+<div class="scard-img">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Cdefs%3E%3ClinearGradient id='s3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230e7090'/%3E%3Cstop offset='100%25' style='stop-color:%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='280' fill='url(%23s3)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='48' opacity='0.2'%3E📄%3C/text%3E%3C/svg%3E" alt="Traducciones"/>
+<div class="scard-badge translate">
+<i class="fas fa-language"></i>
+</div>
+</div>
+<div class="sc-body">
+<h3>Traducciones</h3>
+<p>Traducciones oficiales certificadas de documentos náuticos, títulos de propiedad y documentación extranjera.</p>
+<a href="#contacto" class="sc-lnk">Ver trámites <i class="fas fa-arrow-right"></i></a>
+</div>
+</article>
+<article class="scard reveal">
+<div class="scard-img">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Cdefs%3E%3ClinearGradient id='s4' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2310b981'/%3E%3Cstop offset='100%25' style='stop-color:%230e7090'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='280' fill='url(%23s4)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='48' opacity='0.2'%3E🌴%3C/text%3E%3C/svg%3E" alt="CONANP"/>
+<div class="scard-badge conanp">
+<i class="fas fa-leaf"></i>
+</div>
+</div>
+<div class="sc-body">
+<h3>CONANP</h3>
+<p>Permisos de acceso y operación en áreas naturales protegidas: Isla Mujeres, Cozumel, Sian Ka'an.</p>
+<a href="#contacto" class="sc-lnk">Ver trámites <i class="fas fa-arrow-right"></i></a>
+</div>
+</article>
+<article class="scard reveal">
+<div class="scard-img">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Cdefs%3E%3ClinearGradient id='s5' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230a4a5a'/%3E%3Cstop offset='100%25' style='stop-color:%230bbcd4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='280' fill='url(%23s5)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='48' opacity='0.2'%3E📋%3C/text%3E%3C/svg%3E" alt="SEMAR"/>
+<div class="scard-badge semar">
+<i class="fas fa-certificate"></i>
+</div>
+</div>
+<div class="sc-body">
+<h3>SEMAR</h3>
+<p>Trámites ante Secretaría de Marina: licencias de conducción, títulos náuticos y despachos de navegación.</p>
+<a href="#contacto" class="sc-lnk">Ver trámites <i class="fas fa-arrow-right"></i></a>
+</div>
+</article>
+<article class="scard reveal">
+<div class="scard-img">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 280'%3E%3Cdefs%3E%3ClinearGradient id='s6' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ef4444'/%3E%3Cstop offset='100%25' style='stop-color:%23f59e0b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='280' fill='url(%23s6)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='48' opacity='0.2'%3E🔍%3C/text%3E%3C/svg%3E" alt="Inspección"/>
+<div class="scard-badge inspect">
+<i class="fas fa-search"></i>
+</div>
+</div>
+<div class="sc-body">
+<h3>Inspección</h3>
+<p>Inspecciones técnicas de seguridad, prevención de contaminación y verificación de cuaderno de estabilidad.</p>
+<a href="#contacto" class="sc-lnk">Ver trámites <i class="fas fa-arrow-right"></i></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCIA CON IMAGEN SEMAR -->
+<section id="experiencia" class="section exp">
+<div class="wrap exp-in">
+<div class="exp-c">
+<span class="lbl lbl-w"><i class="fas fa-award"></i> Nuestra experiencia</span>
+<h2>15 años gestionando <span style="color:var(--cyan-lt)">trámites náuticos</span> con éxito</h2>
+<p>Somos un equipo de especialistas certificados con amplia trayectoria en gestión administrativa marítima. Trabajamos directamente con todas las autoridades competentes para garantizar que tus trámites se realicen de forma legal, rápida y sin complicaciones.</p>
+<p>Nuestra oficina mantiene comunicación directa con SEMAR, CONANP y RPMN, lo que nos permite resolver cualquier situación de manera eficiente y profesional.</p>
+<a href="#contacto" class="btn-primary">
+<i class="fas fa-comments"></i>
+Hablar con un Experto
+</a>
+<div class="exp-stats">
+<div class="es">
+<span class="n">500+</span>
+<span class="l">Clientes</span>
+</div>
+<div class="es">
+<span class="n">98%</span>
+<span class="l">Tasa de éxito</span>
+</div>
+<div class="es">
+<span class="n">15+</span>
+<span class="l">Años</span>
+</div>
+</div>
+</div>
+<div class="exp-img">
+<img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='office' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23334155'/%3E%3Cstop offset='100%25' style='stop-color:%230e7090'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23office)'/%3E%3Ctext x='50%25' y='45%25' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='28' opacity='0.8' font-weight='bold'%3ESEMAR%3C/text%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-size='18' opacity='0.6'%3EOficina de Gestión Marítima%3C/text%3E%3C/svg%3E" alt="Oficina SEMAR - Gestión de trámites náuticos"/>
+</div>
+</div>
+</section>
+
+<!-- TRÁMITES -->
+<section id="tramites" class="section">
+<div class="wrap">
+<div class="tram-top reveal">
+<span class="lbl"><i class="fas fa-file-lines"></i> Servicios administrativos</span>
+<h2 class="h2">Trámites que <span style="color:var(--cyan)">gestionamos</span></h2>
+<p class="sub">Servicio integral para todos tus procesos administrativos náuticos en México</p>
+</div>
+<div class="tabs reveal">
+<div class="tb active">Todos</div>
+<div class="tb">RPMN</div>
+<div class="tb">SEMAR</div>
+<div class="tb">Importación</div>
+<div class="tb">Permisos</div>
+</div>
+<div class="tram-grid">
+<div class="tc reveal">
+<div class="tc-head">
+<div class="tc-icon"><i class="fas fa-anchor"></i></div>
+<div>
+<h4>Matrícula RPMN</h4>
+<div class="tc-meta"><i class="fas fa-clock"></i> 5-7 días hábiles</div>
+</div>
+</div>
+<p>Inscripción inicial de embarcaciones nuevas o usadas en el Registro Público Marítimo Nacional.</p>
+<ul>
+<li>Embarcaciones menores</li>
+<li>Embarcaciones mayores</li>
+<li>Yates y veleros</li>
+<li>Motos acuáticas</li>
+</ul>
+<button class="tc-btn" onclick="window.location.href='#contacto'">
+<i class="fas fa-paper-plane"></i> Solicitar trámite
+</button>
+</div>
+<div class="tc reveal">
+<div class="tc-head">
+<div class="tc-icon"><i class="fas fa-ship"></i></div>
+<div>
+<h4>Importación temporal</h4>
+<div class="tc-meta"><i class="fas fa-clock"></i> 3-5 días hábiles</div>
+</div>
+</div>
+<p>Importación temporal de embarcaciones extranjeras. Cumplimiento normativo completo.</p>
+<ul>
+<li>Importación temporal</li>
+<li>Renovaciones</li>
+<li>Cancelaciones</li>
+<li>Regularización</li>
+</ul>
+<button class="tc-btn" onclick="window.location.href='#contacto'">
+<i class="fas fa-paper-plane"></i> Solicitar trámite
+</button>
+</div>
+<div class="tc reveal">
+<div class="tc-head">
+<div class="tc-icon"><i class="fas fa-id-card"></i></div>
+<div>
+<h4>Licencias SEMAR</h4>
+<div class="tc-meta"><i class="fas fa-clock"></i> 7-10 días hábiles</div>
+</div>
+</div>
+<p>Licencias de conducción, títulos náuticos y certificaciones de la Secretaría de Marina.</p>
+<ul>
+<li>Capitán de yate</li>
+<li>Patrón de embarcación</li>
+<li>Operador de moto acuática</li>
+<li>Renovaciones</li>
+</ul>
+<button class="tc-btn" onclick="window.location.href='#contacto'">
+<i class="fas fa-paper-plane"></i> Solicitar trámite
+</button>
+</div>
+<div class="tc reveal">
+<div class="tc-head">
+<div class="tc-icon"><i class="fas fa-leaf"></i></div>
+<div>
+<h4>Permisos CONANP</h4>
+<div class="tc-meta"><i class="fas fa-clock"></i> 10-15 días hábiles</div>
+</div>
+</div>
+<p>Permisos de acceso y operación en áreas naturales protegidas de Quintana Roo.</p>
+<ul>
+<li>Isla Mujeres</li>
+<li>Cozumel</li>
+<li>Sian Ka'an</li>
+<li>Banco Chinchorro</li>
+</ul>
+<button class="tc-btn" onclick="window.location.href='#contacto'">
+<i class="fas fa-paper-plane"></i> Solicitar trámite
+</button>
+</div>
+<div class="tc reveal">
+<div class="tc-head">
+<div class="tc-icon"><i class="fas fa-language"></i></div>
+<div>
+<h4>Traducciones oficiales</h4>
+<div class="tc-meta"><i class="fas fa-clock"></i> 2-3 días hábiles</div>
+</div>
+</div>
+<p>Traducciones certificadas de documentos náuticos y títulos de propiedad.</p>
+<ul>
+<li>Títulos de propiedad</li>
+<li>Facturas y bills of sale</li>
+<li>Certificados de navegación</li>
+<li>Documentación extranjera</li>
+</ul>
+<button class="tc-btn" onclick="window.location.href='#contacto'">
+<i class="fas fa-paper-plane"></i> Solicitar trámite
+</button>
+</div>
+<div class="tc reveal">
+<div class="tc-head">
+<div class="tc-icon"><i class="fas fa-search"></i></div>
+<div>
+<h4>Inspecciones técnicas</h4>
+<div class="tc-meta"><i class="fas fa-clock"></i> 5-7 días hábiles</div>
+</div>
+</div>
+<p>Inspecciones de seguridad, prevención de contaminación y estabilidad.</p>
+<ul>
+<li>Seguridad marítima</li>
+<li>Prevención de contaminación</li>
+<li>Cuaderno de estabilidad</li>
+<li>Certificaciones</li>
+</ul>
+<button class="tc-btn" onclick="window.location.href='#contacto'">
+<i class="fas fa-paper-plane"></i> Solicitar trámite
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios" class="section ben">
+<div class="wrap ben-in">
+<div class="ben-top reveal">
+<span class="lbl lbl-w"><i class="fas fa-star"></i> Por qué elegirnos</span>
+<h2 class="h2-w">Beneficios de trabajar con nosotros</h2>
+<p class="sub-w">Ahorra tiempo, dinero y dolores de cabeza con nuestro servicio profesional de gestión náutica</p>
+</div>
+<div class="ben-grid">
+<div class="bc reveal">
+<div class="bc-icon"><i class="fas fa-bolt"></i></div>
+<h3>Rapidez garantizada</h3>
+<p>Procesamos tu trámite en el menor tiempo posible gracias a nuestra experiencia y contactos directos con las autoridades.</p>
+</div>
+<div class="bc reveal">
+<div class="bc-icon"><i class="fas fa-shield-check"></i></div>
+<h3>Cumplimiento legal</h3>
+<p>100% de cumplimiento normativo. Todos nuestros trámites siguen los procedimientos oficiales establecidos.</p>
+</div>
+<div class="bc reveal">
+<div class="bc-icon"><i class="fas fa-headset"></i></div>
+<h3>Atención personalizada</h3>
+<p>Un asesor dedicado te acompaña en todo el proceso, manteniéndote informado en cada etapa del trámite.</p>
+</div>
+<div class="bc reveal">
+<div class="bc-icon"><i class="fas fa-file-circle-check"></i></div>
+<h3>Sin complicaciones</h3>
+<p>Nosotros hacemos todo el trabajo. Tú solo proporcionas la documentación y nosotros nos encargamos del resto.</p>
+</div>
+<div class="bc reveal">
+<div class="bc-icon"><i class="fas fa-clock"></i></div>
+<h3>Seguimiento en tiempo real</h3>
+<p>Conoce el estatus de tu trámite en todo momento con nuestro sistema de seguimiento por colores.</p>
+</div>
+<div class="bc reveal">
+<div class="bc-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+<h3>Precios transparentes</h3>
+<p>Sin costos ocultos. Cotizaciones claras y detalladas antes de iniciar cualquier trámite.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="section">
+<div class="wrap">
+<div class="proc-top reveal">
+<span class="lbl"><i class="fas fa-route"></i> Cómo trabajamos</span>
+<h2 class="h2">Proceso <span style="color:var(--cyan)">simple y eficiente</span></h2>
+<p class="sub">En solo 4 pasos tienes tu trámite en marcha sin complicaciones</p>
+</div>
+<div class="proc-steps">
+<div class="ps reveal">
+<div class="ps-num">1</div>
+<h4>Contacto inicial</h4>
+<p>Nos contactas por WhatsApp, teléfono o formulario. Te respondemos en menos de 24 horas con una cotización detallada.</p>
+</div>
+<div class="ps reveal">
+<div class="ps-num">2</div>
+<h4>Envío de documentos</h4>
+<p>Nos envías la documentación requerida de forma digital. Te indicamos exactamente qué necesitamos.</p>
+</div>
+<div class="ps reveal">
+<div class="ps-num">3</div>
+<h4>Gestión del trámite</h4>
+<p>Iniciamos el proceso ante las autoridades correspondientes. Te mantenemos informado del avance con nuestro sistema de colores.</p>
+</div>
+<div class="ps reveal">
+<div class="ps-num">4</div>
+<h4>Entrega de resultados</h4>
+<p>Recibes tus documentos finalizados. Te los entregamos físicamente o de forma digital según tu preferencia.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="ct">
+<div class="wrap">
+<div class="ct-top reveal">
+<span class="lbl"><i class="fas fa-envelope"></i> Hablemos</span>
+<h2>¿Listo para iniciar tu trámite?</h2>
+<p>Contáctanos hoy y recibe una cotización sin compromiso en menos de 24 horas</p>
+</div>
+<div class="ct-g">
+<div class="ct-info reveal">
+<div class="ci">
+<div class="ci-icon"><i class="fas fa-phone"></i></div>
+<span class="lb">Teléfono</span>
+<div class="v"><a href="tel:+529981234567">+52 998 123 4567</a></div>
+</div>
+<div class="ci">
+<div class="ci-icon"><i class="fab fa-whatsapp"></i></div>
+<span class="lb">WhatsApp</span>
+<div class="v"><a href="https://wa.me/529981234567">+52 998 123 4567</a></div>
+</div>
+<div class="ci">
+<div class="ci-icon"><i class="fas fa-envelope"></i></div>
+<span class="lb">Email</span>
+<div class="v"><a href="mailto:contacto@soportemaritimo.mx">contacto@soportemaritimo.mx</a></div>
+</div>
+<div class="ci">
+<div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+<span class="lb">Ubicación</span>
+<div class="v">Cancún, Quintana Roo, México</div>
+</div>
+</div>
+<form class="fc reveal" id="contact-form" onsubmit="return handleSubmit(event)">
+<h3>Solicita tu cotización</h3>
+<p class="fs">Completa el formulario y te contactaremos pronto con una propuesta personalizada</p>
+<div class="fg">
+<label>Nombre completo</label>
+<input type="text" id="fn" placeholder="Ej: Juan Pérez" required/>
+<div class="ferr" id="en">Por favor ingresa tu nombre</div>
+</div>
+<div class="fg">
+<label>Correo electrónico</label>
+<input type="email" id="fe" placeholder="tu@email.com" required/>
+<div class="ferr" id="ee">Por favor ingresa un email válido</div>
+</div>
+<div class="fg">
+<label>Teléfono</label>
+<input type="tel" id="ft" placeholder="+52 998 123 4567" required/>
+</div>
+<div class="fg">
+<label>Tipo de trámite</label>
+<select id="fs2" required>
+<option value="">Selecciona un trámite</option>
+<option>RPMN - Matrícula</option>
+<option>Importación temporal</option>
+<option>Licencias SEMAR</option>
+<option>Permisos CONANP</option>
+<option>Traducciones</option>
+<option>Inspecciones</option>
+<option>Otro</option>
+</select>
+<div class="ferr" id="es">Por favor selecciona un tipo de trámite</div>
+</div>
+<div class="fg">
+<label>Mensaje (opcional)</label>
+<textarea id="fm" placeholder="Cuéntanos más sobre tu trámite..."></textarea>
+<div class="ferr" id="em2">Por favor describe tu solicitud</div>
+</div>
+<button type="submit" class="btn-orange">
+<i class="fas fa-paper-plane"></i>
+Enviar Solicitud
+</button>
+<p>Al enviar este formulario aceptas nuestra <a href="#">política de privacidad</a></p>
+</form>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+<div class="wrap foot-in">
+<div class="fd">
+<h4>Soporte Marítimo</h4>
+<p>Especialistas en gestión administrativa náutica con más de 15 años de experiencia en Quintana Roo, México.</p>
+<div class="soc">
+<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+<div class="fco">
+<h5>Servicios</h5>
+<ul>
+<li><a href="#servicios">RPMN</a></li>
+<li><a href="#servicios">Importación</a></li>
+<li><a href="#servicios">SEMAR</a></li>
+<li><a href="#servicios">CONANP</a></li>
+</ul>
+</div>
+<div class="fco">
+<h5>Empresa</h5>
+<ul>
+<li><a href="#experiencia">Sobre nosotros</a></li>
+<li><a href="#proceso">Cómo trabajamos</a></li>
+<li><a href="#contacto">Contacto</a></li>
+<li><a href="#">Blog</a></li>
+</ul>
+</div>
+<div class="fco">
+<h5>Legal</h5>
+<ul>
+<li><a href="#">Aviso de privacidad</a></li>
+<li><a href="#">Términos y condiciones</a></li>
+<li><a href="#">Preguntas frecuentes</a></li>
+</ul>
+</div>
+</div>
+<div class="wrap">
+<div class="fb">
+<p>&copy; 2026 Soporte y Consultoría Marítima. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast">
+<i class="fas fa-check-circle"></i>
+<p>¡Mensaje enviado! <span>Te contactaremos pronto</span></p>
+</div>
+
+<script>
+var q=s=>document.querySelector(s),qa=s=>document.querySelectorAll(s);
+window.addEventListener('scroll',function(){var n=q('#nav');if(window.scrollY>50)n.classList.add('scrolled');else n.classList.remove('scrolled')});
+var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting)i.target.classList.add('on')})},{threshold:.1});
+qa('.reveal').forEach(function(e){obs.observe(e)});
+function handleSubmit(e){
+  e.preventDefault();
+  var n=q('#fn').value.trim(),em=q('#fe').value.trim(),ph=q('#ft').value.trim(),sv=q('#fs2').value,msg=q('#fm').value.trim();
+  var valid=true;
+  qa('.fg').forEach(function(f){f.classList.remove('err')});
+  if(!n){q('#fn').closest('.fg').classList.add('err');valid=false}
+  if(!em||!em.includes('@')){q('#fe').closest('.fg').classList.add('err');valid=false}
+  if(!sv){q('#fs2').closest('.fg').classList.add('err');valid=false}
+  if(valid){
+    var toast=q('#toast');
+    toast.classList.add('show');
+    setTimeout(function(){toast.classList.remove('show')},4000);
+    q('#contact-form').reset();
+  }
+  return false;
+}
+
+var currentLang='es';
+var translations={
+  es:{
+    badge:'Especialistas certificados',
+    dotsLabel:'Sistema de estatus de trámites',
+    h1:'Gestión profesional de <span class="gold">trámites náuticos</span> en México',
+    heroSub:'Simplificamos todos tus procesos administrativos marítimos ante SEMAR, CONANP y RPMN. Expertos en importación, matriculación y certificaciones náuticas en Quintana Roo.',
+    btn1:'Cotizar Trámite Ahora',
+    btn2:'Ver Servicios',
+    note:'100% legal y cumplimiento normativo garantizado',
+    tbar:['Agencia certificada SEMAR','Respuesta en 24 horas','+500 clientes satisfechos','98% tasa de éxito'],
+    secLbl:'Servicios especializados',
+    secH2:'Servicios <span style="color:var(--cyan)">por área</span>',
+    secSub:'Cobertura completa para todas tus necesidades de gestión marítima y náutica en México',
+    cards:[
+      {h:'RPMN',p:'Registro Público Marítimo Nacional: inscripción, renovación y modificación de embarcaciones menores y mayores.',lnk:'Ver trámites'},
+      {h:'Importación',p:'Importación temporal de embarcaciones extranjeras. Cumplimiento normativo completo.',lnk:'Ver trámites'},
+      {h:'Traducciones',p:'Traducciones oficiales certificadas de documentos náuticos, títulos de propiedad y documentación extranjera.',lnk:'Ver trámites'},
+      {h:'CONANP',p:'Permisos de acceso y operación en áreas naturales protegidas: Isla Mujeres, Cozumel, Sian Ka\'an.',lnk:'Ver trámites'},
+      {h:'SEMAR',p:'Trámites ante Secretaría de Marina: licencias de conducción, títulos náuticos y despachos de navegación.',lnk:'Ver trámites'},
+      {h:'Inspección',p:'Inspecciones técnicas de seguridad, prevención de contaminación y verificación de cuaderno de estabilidad.',lnk:'Ver trámites'}
+    ],
+    expLbl:'Nuestra experiencia',
+    expH2:'15 años gestionando trámites náuticos con éxito',
+    expP1:'Somos un equipo de especialistas certificados con amplia trayectoria en gestión administrativa marítima. Trabajamos directamente con todas las autoridades competentes para garantizar que tus trámites se realicen de forma legal, rápida y sin complicaciones.',
+    expP2:'Nuestra oficina mantiene comunicación directa con SEMAR, CONANP y RPMN, lo que nos permite resolver cualquier situación de manera eficiente y profesional.',
+    expBtn:'<i class="fas fa-comments"></i> Hablar con un Experto',
+    stats:[{n:'500+',l:'Clientes'},{n:'98%',l:'Tasa de éxito'},{n:'15+',l:'Años'}],
+    tramLbl:'Servicios administrativos',
+    tramH2:'Trámites que <span style="color:var(--cyan)">gestionamos</span>',
+    tramSub:'Servicio integral para todos tus procesos administrativos náuticos en México',
+    tabs:['Todos','RPMN','SEMAR','Importación','Permisos'],
+    benLbl:'Por qué elegirnos',
+    benH2:'Beneficios de trabajar con nosotros',
+    benSub:'Ahorra tiempo, dinero y dolores de cabeza con nuestro servicio profesional de gestión náutica',
+    bcards:[
+      {h:'Rapidez garantizada',p:'Procesamos tu trámite en el menor tiempo posible gracias a nuestra experiencia y contactos directos con las autoridades.'},
+      {h:'Cumplimiento legal',p:'100% de cumplimiento normativo. Todos nuestros trámites siguen los procedimientos oficiales establecidos.'},
+      {h:'Atención personalizada',p:'Un asesor dedicado te acompaña en todo el proceso, manteniéndote informado en cada etapa del trámite.'},
+      {h:'Sin complicaciones',p:'Nosotros hacemos todo el trabajo. Tú solo proporcionas la documentación y nosotros nos encargamos del resto.'},
+      {h:'Seguimiento en tiempo real',p:'Conoce el estatus de tu trámite en todo momento con nuestro sistema de seguimiento por colores.'},
+      {h:'Precios transparentes',p:'Sin costos ocultos. Cotizaciones claras y detalladas antes de iniciar cualquier trámite.'}
+    ],
+    procLbl:'Cómo trabajamos',
+    procH2:'Proceso <span style="color:var(--cyan)">simple y eficiente</span>',
+    procSub:'En solo 4 pasos tienes tu trámite en marcha sin complicaciones',
+    steps:[
+      {h:'Contacto inicial',p:'Nos contactas por WhatsApp, teléfono o formulario. Te respondemos en menos de 24 horas con una cotización detallada.'},
+      {h:'Envío de documentos',p:'Nos envías la documentación requerida de forma digital. Te indicamos exactamente qué necesitamos.'},
+      {h:'Gestión del trámite',p:'Iniciamos el proceso ante las autoridades correspondientes. Te mantenemos informado del avance con nuestro sistema de colores.'},
+      {h:'Entrega de resultados',p:'Recibes tus documentos finalizados. Te los entregamos físicamente o de forma digital según tu preferencia.'}
+    ],
+    ctLbl:'Hablemos',
+    ctH2:'¿Listo para iniciar tu trámite?',
+    ctSub:'Contáctanos hoy y recibe una cotización sin compromiso en menos de 24 horas',
+    ciLbls:['Teléfono','WhatsApp','Email','Ubicación'],
+    ciVals:['+52 998 123 4567','+52 998 123 4567','contacto@soportemaritimo.mx','Cancún, Quintana Roo, México'],
+    formH:'Solicita tu cotización',
+    formSub:'Completa el formulario y te contactaremos pronto con una propuesta personalizada',
+    labels:['Nombre completo','Correo electrónico','Teléfono','Tipo de trámite','Mensaje (opcional)'],
+    phs:['Ej: Juan Pérez','tu@email.com','+52 998 123 4567','',  'Cuéntanos más sobre tu trámite...'],
+    opts:['Selecciona un trámite','RPMN - Matrícula','Importación temporal','Licencias SEMAR','Permisos CONANP','Traducciones','Inspecciones','Otro'],
+    submitBtn:'<i class="fas fa-paper-plane"></i> Enviar Solicitud',
+    privacy:'Al enviar este formulario aceptas nuestra <a href="#">política de privacidad</a>',
+    errs:['Por favor ingresa tu nombre','Por favor ingresa un email válido','Por favor selecciona un tipo de trámite','Por favor describe tu solicitud'],
+    ftP:'Especialistas en gestión administrativa náutica con más de 15 años de experiencia en Quintana Roo, México.',
+    ftCols:['Servicios','Empresa','Legal'],
+    ftCopy:'© 2026 Soporte y Consultoría Marítima. Todos los derechos reservados.',
+    toast:['¡Mensaje enviado!','Te contactaremos pronto'],
+    hcard:['Gestión Marítima Profesional','Quintana Roo, México']
+  },
+  en:{
+    badge:'Certified specialists',
+    dotsLabel:'Process tracking system',
+    h1:'Professional management of <span class="gold">nautical procedures</span> in Mexico',
+    heroSub:'We simplify all your maritime administrative processes with SEMAR, CONANP, and RPMN. Experts in importation, registration, and nautical certifications in Quintana Roo.',
+    btn1:'Get Quote Now',
+    btn2:'View Services',
+    note:'100% legal and guaranteed regulatory compliance',
+    tbar:['SEMAR certified agency','24-hour response','+500 satisfied clients','98% success rate'],
+    secLbl:'Specialized services',
+    secH2:'Services <span style="color:var(--cyan)">by area</span>',
+    secSub:'Complete coverage for all your maritime and nautical management needs in Mexico',
+    cards:[
+      {h:'RPMN',p:'National Maritime Public Registry: registration, renewal and modification of minor and major vessels.',lnk:'View procedures'},
+      {h:'Importation',p:'Temporary importation of foreign vessels. Complete regulatory compliance.',lnk:'View procedures'},
+      {h:'Translations',p:'Certified official translations of nautical documents, ownership titles and foreign documentation.',lnk:'View procedures'},
+      {h:'CONANP',p:'Access and operation permits in protected natural areas: Isla Mujeres, Cozumel, Sian Ka\'an.',lnk:'View procedures'},
+      {h:'SEMAR',p:'Procedures with the Navy Secretariat: navigation licenses, nautical titles and navigation dispatches.',lnk:'View procedures'},
+      {h:'Inspection',p:'Technical safety inspections, pollution prevention and stability notebook verification.',lnk:'View procedures'}
+    ],
+    expLbl:'Our experience',
+    expH2:'15 years successfully managing nautical procedures',
+    expP1:'We are a team of certified specialists with extensive experience in maritime administrative management. We work directly with all competent authorities to ensure your procedures are carried out legally, quickly and without complications.',
+    expP2:'Our office maintains direct communication with SEMAR, CONANP and RPMN, which allows us to resolve any situation efficiently and professionally.',
+    expBtn:'<i class="fas fa-comments"></i> Talk to an Expert',
+    stats:[{n:'500+',l:'Clients'},{n:'98%',l:'Success rate'},{n:'15+',l:'Years'}],
+    tramLbl:'Administrative services',
+    tramH2:'Procedures we <span style="color:var(--cyan)">manage</span>',
+    tramSub:'Comprehensive service for all your nautical administrative processes in Mexico',
+    tabs:['All','RPMN','SEMAR','Importation','Permits'],
+    benLbl:'Why choose us',
+    benH2:'Benefits of working with us',
+    benSub:'Save time, money and headaches with our professional nautical management service',
+    bcards:[
+      {h:'Guaranteed speed',p:'We process your procedure in the shortest possible time thanks to our experience and direct contacts with the authorities.'},
+      {h:'Legal compliance',p:'100% regulatory compliance. All our procedures follow established official procedures.'},
+      {h:'Personalized attention',p:'A dedicated advisor accompanies you throughout the process, keeping you informed at each stage.'},
+      {h:'No complications',p:'We do all the work. You just provide the documentation and we take care of the rest.'},
+      {h:'Real-time tracking',p:'Know the status of your procedure at all times with our color tracking system.'},
+      {h:'Transparent pricing',p:'No hidden costs. Clear and detailed quotes before starting any procedure.'}
+    ],
+    procLbl:'How we work',
+    procH2:'Simple and <span style="color:var(--cyan)">efficient</span> process',
+    procSub:'In just 4 steps your procedure is underway without complications',
+    steps:[
+      {h:'Initial contact',p:'Contact us via WhatsApp, phone or form. We respond in less than 24 hours with a detailed quote.'},
+      {h:'Document submission',p:'Send us the required documentation digitally. We tell you exactly what we need.'},
+      {h:'Procedure management',p:'We initiate the process with the corresponding authorities. We keep you informed of progress with our color system.'},
+      {h:'Results delivery',p:'You receive your finalized documents. We deliver them physically or digitally according to your preference.'}
+    ],
+    ctLbl:'Let\'s talk',
+    ctH2:'Ready to start your procedure?',
+    ctSub:'Contact us today and receive a no-obligation quote in less than 24 hours',
+    ciLbls:['Phone','WhatsApp','Email','Location'],
+    ciVals:['+52 998 123 4567','+52 998 123 4567','contacto@soportemaritimo.mx','Cancun, Quintana Roo, Mexico'],
+    formH:'Request your quote',
+    formSub:'Complete the form and we will contact you soon with a personalized proposal',
+    labels:['Full name','Email','Phone','Procedure type','Message (optional)'],
+    phs:['E.g: John Doe','your@email.com','+52 998 123 4567','','Tell us more about your procedure...'],
+    opts:['Select a procedure','RPMN - Registration','Temporary importation','SEMAR licenses','CONANP permits','Translations','Inspections','Other'],
+    submitBtn:'<i class="fas fa-paper-plane"></i> Send Request',
+    privacy:'By submitting this form you accept our <a href="#">privacy policy</a>',
+    errs:['Please enter your name','Please enter a valid email','Please select a procedure type','Please describe your request'],
+    ftP:'Specialists in nautical administrative management with over 15 years of experience in Quintana Roo, Mexico.',
+    ftCols:['Services','Company','Legal'],
+    ftCopy:'© 2026 Maritime Support & Consulting. All rights reserved.',
+    toast:['Message sent!','We will contact you soon'],
+    hcard:['Professional Maritime Management','Quintana Roo, Mexico']
+  }
+};
+
+function applyLang(lang){
+  var d=translations[lang];
+  var badge=q('.badge');if(badge){var txt=badge.textContent;badge.textContent=d.badge}
+  var dotsSpan=q('.dots span');if(dotsSpan)dotsSpan.textContent=d.dotsLabel;
+  var h1=q('.hero h1');if(h1)h1.innerHTML=d.h1;
+  var hsub=q('.hero-sub');if(hsub)hsub.textContent=d.heroSub;
+  var hb=qa('.hero-btns a');
+  if(hb[0])hb[0].innerHTML='<i class="fas fa-rocket"></i> '+d.btn1;
+  if(hb[1])hb[1].innerHTML='<i class="fas fa-list-check"></i> '+d.btn2;
+  var hn=q('.hero-note span');if(hn)hn.textContent=d.note;
+  var ti=qa('.tbar-item span');
+  for(var i=0;i<ti.length&&i<d.tbar.length;i++){
+    var ic=ti[i].querySelector('i');
+    ti[i].innerHTML=(ic?ic.outerHTML+' ':'')+d.tbar[i];
+  }
+
+  var sl=q('#servicios .lbl');
+  if(sl){var ic=sl.querySelector('i');sl.innerHTML=(ic?ic.outerHTML+' ':'')+d.secLbl;}
+  var sh=q('#servicios .h2');if(sh)sh.innerHTML=d.secH2;
+  var ss=q('#servicios .sub');if(ss)ss.innerHTML=d.secSub;
+  var sc=qa('.scard');
+  for(var i=0;i<sc.length&&i<d.cards.length;i++){
+    var h=sc[i].querySelector('.sc-body h3'),p=sc[i].querySelector('.sc-body p'),lk=sc[i].querySelector('.sc-lnk');
+    if(h)h.textContent=d.cards[i].h;
+    if(p)p.textContent=d.cards[i].p;
+    if(lk)lk.innerHTML=d.cards[i].lnk+' <i class="fas fa-arrow-right"></i>';
+  }
+
+  var exs=q('#experiencia');
+  if(exs){
+    var el=exs.querySelector('.lbl-w');if(el){var ic2=el.querySelector('i');el.innerHTML=(ic2?ic2.outerHTML+' ':'')+d.expLbl;}
+    var eh=exs.querySelector('.exp-c h2');if(eh)eh.textContent=d.expH2;
+    var eps=exs.querySelectorAll('.exp-c p');
+    if(eps[0])eps[0].textContent=d.expP1;if(eps[1])eps[1].textContent=d.expP2;
+    var eb=exs.querySelector('.btn-primary');if(eb)eb.innerHTML=d.expBtn;
+    var ests=exs.querySelectorAll('.es');
+    for(var i=0;i<ests.length&&i<d.stats.length;i++){
+      var n=ests[i].querySelector('.n'),l=ests[i].querySelector('.l');
+      if(n)n.textContent=d.stats[i].n;if(l)l.textContent=d.stats[i].l;
+    }
+  }
+
+  var trs=q('#tramites');
+  if(trs){
+    var tl=trs.querySelector('.lbl');if(tl){var ic3=tl.querySelector('i');tl.innerHTML=(ic3?ic3.outerHTML+' ':'')+d.tramLbl;}
+    var th=trs.querySelector('.h2');if(th)th.innerHTML=d.tramH2;
+    var tsu=trs.querySelector('.sub');if(tsu)tsu.textContent=d.tramSub;
+    var tabs=trs.querySelectorAll('.tb');
+    for(var i=0;i<tabs.length&&i<d.tabs.length;i++){tabs[i].textContent=d.tabs[i];}
+  }
+
+  var bns=q('#beneficios');
+  if(bns){
+    var bl=bns.querySelector('.lbl-w');if(bl){var ic4=bl.querySelector('i');bl.innerHTML=(ic4?ic4.outerHTML+' ':'')+d.benLbl;}
+    var bh=bns.querySelector('.h2-w');if(bh)bh.textContent=d.benH2;
+    var bsu=bns.querySelector('.sub-w');if(bsu)bsu.textContent=d.benSub;
+    var bcs=bns.querySelectorAll('.bc');
+    for(var i=0;i<bcs.length&&i<d.bcards.length;i++){
+      var h2=bcs[i].querySelector('h3'),p2=bcs[i].querySelector('p');
+      if(h2)h2.textContent=d.bcards[i].h;if(p2)p2.textContent=d.bcards[i].p;
+    }
+  }
+
+  var prs=q('#proceso');
+  if(prs){
+    var pl=prs.querySelector('.lbl');if(pl){var ic5=pl.querySelector('i');pl.innerHTML=(ic5?ic5.outerHTML+' ':'')+d.procLbl;}
+    var ph=prs.querySelector('.h2');if(ph)ph.innerHTML=d.procH2;
+    var psu=prs.querySelector('.sub');if(psu)psu.textContent=d.procSub;
+    var pss=prs.querySelectorAll('.ps');
+    for(var i=0;i<pss.length&&i<d.steps.length;i++){
+      var h3=pss[i].querySelector('h4'),p3=pss[i].querySelector('p');
+      if(h3)h3.textContent=d.steps[i].h;if(p3)p3.textContent=d.steps[i].p;
+    }
+  }
+
+  var cts=q('#contacto');
+  if(cts){
+    var cl=cts.querySelector('.lbl');if(cl){var ic6=cl.querySelector('i');cl.innerHTML=(ic6?ic6.outerHTML+' ':'')+d.ctLbl;}
+    var ch=cts.querySelector('h2');if(ch)ch.textContent=d.ctH2;
+    var csu=cts.querySelector('.ct-g > div > p');if(csu)csu.textContent=d.ctSub;
+    var cis=cts.querySelectorAll('.ci');
+    for(var i=0;i<cis.length&&i<d.ciLbls.length;i++){
+      var lb=cis[i].querySelector('.lb');if(lb)lb.textContent=d.ciLbls[i];
+      if(d.ciVals[i]){var v=cis[i].querySelector('.v');if(v&&d.ciVals[i])v.textContent=d.ciVals[i];}
+    }
+    var fh=cts.querySelector('.fc h3');if(fh)fh.textContent=d.formH;
+    var fs=cts.querySelector('.fs');if(fs)fs.textContent=d.formSub;
+    var lbls=cts.querySelectorAll('.fg label');
+    for(var i=0;i<lbls.length&&i<d.labels.length;i++){lbls[i].textContent=d.labels[i];}
+    var fnEl=document.getElementById('fn');if(fnEl)fnEl.placeholder=d.phs[0];
+    var feEl=document.getElementById('fe');if(feEl)feEl.placeholder=d.phs[1];
+    var ftEl=document.getElementById('ft');if(ftEl)ftEl.placeholder=d.phs[2];
+    var fmEl=document.getElementById('fm');if(fmEl)fmEl.placeholder=d.phs[4];
+    var sel=document.getElementById('fs2');
+    if(sel){var opts=sel.querySelectorAll('option');for(var i=0;i<opts.length&&i<d.opts.length;i++){opts[i].textContent=d.opts[i];}}
+    var sb=cts.querySelector('.btn-orange');if(sb)sb.innerHTML=d.submitBtn;
+    var prv=cts.querySelector('.fc > p');if(prv)prv.innerHTML=d.privacy;
+    var enEl=document.getElementById('en');if(enEl)enEl.textContent=d.errs[0];
+    var eeEl=document.getElementById('ee');if(eeEl)eeEl.textContent=d.errs[1];
+    var esEl=document.getElementById('es');if(esEl)esEl.textContent=d.errs[2];
+    var em2El=document.getElementById('em2');if(em2El)em2El.textContent=d.errs[3];
+  }
+
+  var fdp=q('.fd p');if(fdp)fdp.textContent=d.ftP;
+  var fch=qa('.fco h5');for(var i=0;i<fch.length&&i<d.ftCols.length;i++){fch[i].textContent=d.ftCols[i];}
+  var fcp=q('.fb p');if(fcp)fcp.textContent=d.ftCopy;
+  var tp=q('#toast p');if(tp)tp.innerHTML=d.toast[0]+'<span>'+d.toast[1]+'</span>';
+  var hch=q('.hcard-foot h4');if(hch)hch.textContent=d.hcard[0];
+  var hcp=q('.hcard-foot p');if(hcp)hcp.textContent=d.hcard[1];
+  document.documentElement.lang=lang;
+}
+
+function toggleLang(){
+  currentLang=currentLang==='es'?'en':'es';
+  applyLang(currentLang);
+  var btn=document.getElementById('lang-btn');
+  if(btn)btn.innerHTML=currentLang==='en'?'<span class="flag">🇲🇽</span> ES':'<span class="flag">🇺🇸</span> EN';
+  try{localStorage.setItem('preferredLang',currentLang);}catch(e){}
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+  var saved=null;try{saved=localStorage.getItem('preferredLang');}catch(e){}
+  var br=(navigator.language||navigator.userLanguage||'es').toLowerCase();
+  var use=saved||(br.indexOf('en')===0?'en':'es');
+  if(use==='en'){
+    currentLang='en';applyLang('en');
+    var btn=document.getElementById('lang-btn');
+    if(btn)btn.innerHTML='<span class="flag">🇲🇽</span> ES';
+  }
+});
+</script>
+</body>
+</html>
