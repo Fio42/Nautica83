@@ -47,17 +47,18 @@ a{text-decoration:none;color:inherit}
 button{font-family:'Inter',sans-serif;cursor:pointer}
 
 /* NAV */
-#nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.985);backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,188,212,.12);height:82px;padding:0 1.4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:box-shadow .3s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.985);backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,188,212,.12);height:82px;padding:0 1.4rem;display:flex;align-items:center;justify-content:space-between;gap:.8rem;transition:box-shadow .3s}
 #nav.scrolled{box-shadow:0 2px 20px rgba(10,50,70,.12)}
-.nav-logo{display:flex;align-items:center;gap:.65rem;font-family:'Playfair Display',serif;font-weight:700;font-size:.93rem;line-height:1.15;min-width:0}
+.nav-logo{display:flex;align-items:center;gap:.65rem;font-family:'Playfair Display',serif;font-weight:700;font-size:.93rem;line-height:1.15;min-width:0;flex:0 1 auto}
 .nav-icon{width:38px;height:38px;background:var(--hero-g);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;flex-shrink:0}
 .nl1{color:var(--navy)}
 .nl2{color:var(--teal);font-size:.69rem;font-family:'Inter',sans-serif;font-weight:600;display:block}
-.navlinks{display:flex;align-items:center;gap:1.15rem;flex-wrap:nowrap;margin-left:auto}
-.navlinks a{color:var(--muted);font-size:.81rem;font-weight:600;transition:color .2s;white-space:nowrap}
+.navlinks{display:flex;align-items:center;justify-content:center;gap:clamp(.6rem,.9vw,1rem);flex:1 1 auto;flex-wrap:nowrap;min-width:0;margin-left:auto}
+.navlinks a{color:var(--muted);font-size:.78rem;font-weight:600;transition:color .2s;white-space:nowrap}
 .navlinks a:hover{color:var(--navy)}
-.btn-nav{background:var(--btn-g);color:#fff!important;padding:.55rem 1.15rem;border-radius:8px;font-weight:700!important;box-shadow:0 3px 12px rgba(11,188,212,.22);transition:all .2s!important}
+.btn-nav{background:var(--btn-g);color:#fff!important;padding:.55rem 1.05rem;border-radius:8px;font-weight:700!important;box-shadow:0 3px 12px rgba(11,188,212,.22);transition:all .2s!important;flex-shrink:0}
 .btn-nav:hover{opacity:.9;transform:translateY(-1px)}
+.nav-actions{display:flex;align-items:center;gap:.7rem;flex:0 0 auto}
 .burger{display:none;background:none;border:none;color:var(--navy);font-size:1.4rem;padding:.3rem}
 .mob{display:none;flex-direction:column;position:fixed;top:82px;left:0;right:0;z-index:899;background:#fff;border-bottom:2px solid var(--cyan);box-shadow:0 8px 24px rgba(0,0,0,.1)}
 .mob.open{display:flex}
@@ -249,12 +250,13 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 #toast p span{color:var(--muted);font-size:.74rem;display:block;margin-top:.07rem}
 
 /* LANG TOGGLE */
-#lang-btn{display:flex;align-items:center;gap:.35rem;background:rgba(11,188,212,.08);border:1px solid rgba(11,188,212,.22);color:var(--teal);padding:.34rem .7rem;border-radius:7px;font-size:.74rem;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;letter-spacing:.04em;white-space:nowrap;flex-shrink:0}
+#lang-btn{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;min-width:68px;height:36px;background:rgba(11,188,212,.08);border:1px solid rgba(11,188,212,.22);color:var(--teal);padding:0 .7rem;border-radius:7px;font-size:.74rem;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;letter-spacing:.04em;white-space:nowrap;flex-shrink:0;line-height:1}
 #lang-btn:hover{background:rgba(11,188,212,.16);border-color:var(--cyan);color:var(--navy)}
 #lang-btn .flag{font-size:.95rem}
-@media(max-width:768px){#lang-btn{padding:.3rem .65rem;font-size:.72rem}}
+@media(max-width:768px){#lang-btn{min-width:64px;height:34px;font-size:.72rem}}
 
 /* RESPONSIVE */
+@media(max-width:1180px){.navlinks{display:none}.burger{display:block}}
 @media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr 1fr}.pg{grid-template-columns:1fr 1fr}.pg::before{display:none}}
 @media(max-width:768px){#nav{height:66px;padding:0 1rem}.mob{top:66px}.hero{padding-top:66px}.navlinks{display:none}.burger{display:block}.hero-in{grid-template-columns:1fr}.hero-r{display:none}.exp-lay{grid-template-columns:1fr}.exp-img{height:260px}.ct-g{grid-template-columns:1fr;gap:2.5rem}.fr{grid-template-columns:1fr}.ft{grid-template-columns:1fr;gap:2rem}.pg{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr}}
 @media(max-width:520px){.grid3,.grid4{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.hero-btns{flex-direction:column}.exp-stats{gap:1.5rem}}
@@ -274,8 +276,10 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
     <a href="#proceso">Proceso</a>
     <a href="#contacto" class="btn-nav">Contactar</a>
   </div>
-  <button id="lang-btn" onclick="toggleLang()" aria-label="Switch language"><span class="flag">🇺🇸</span> EN</button>
-  <button class="burger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+  <div class="nav-actions">
+    <button id="lang-btn" onclick="toggleLang()" aria-label="Switch language"><span class="flag">🇺🇸</span> EN</button>
+    <button class="burger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+  </div>
 </nav>
 <div class="mob" id="mob">
   <a href="#servicios" onclick="closeMenu()">Servicios</a>
@@ -592,7 +596,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
     <div class="fco"><h5>Contacto</h5><ul><li><a href="/cdn-cgi/l/email-protection#accfc3c2d8cdcfd8c3ecdfc3dcc3ded8c9c1cddec5d8c5c1c382c1d4"><span class="__cf_email__" data-cfemail="b6d5d9d8c2d7d5c2d9f6c5d9c6d9c4c2d3dbd7c4dfc2dfdbd998dbce">[email&#160;protected]</span></a></li><li><a href="tel:+529981234567">+52 (998) 123 4567</a></li><li><a href="#contacto">Cancún, Q. Roo</a></li><li><a href="#contacto">Lun-Vie 9am-6pm</a></li></ul></div>
   </div>
   <div class="fb">
-    <p>© 2025 Soporte y Consultoría Marítima. Todos los derechos reservados.</p>
+    <p>© 2026 Soporte y Consultoría Marítima. Todos los derechos reservados.</p>
     <div class="socs">
       <a href="#" class="sb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="#" class="sb" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -625,6 +629,7 @@ function activateTab(id){
 }
 document.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.panel').forEach(p=>{p.style.display=p.classList.contains('on')?'block':'none'});
+  document.querySelectorAll('.sc-ico').forEach(function(el){el.remove();});
 });
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
@@ -657,7 +662,7 @@ es:{
   heroBtn1:'<i class="fas fa-paper-plane"></i> Solicita Tu Consulta Gratuita \u2192',
   heroBtn2:'<i class="fas fa-compass"></i> Ver Servicios',
   heroNote:'<i class="fas fa-check-circle"></i> Sin compromiso &nbsp;\u2022&nbsp; Respuesta en 24 horas',
-  tbar:['RPMN Certificado','Importaci\u00f3n de Embarcaciones','Permisos CONANP','Tr\u00e1mites SEMAR','Permisos de Navegaci\u00f3n','Quintana Roo'],
+  tbar:['RPMN Certificado','Importaci\u00f3n de Embarcaciones','Permisos CONANP','Tr\u00e1mites SEMAR','Permisos de Navegaci\u00f3n','Quintana Roo','12+ A\u00f1os de Experiencia','1,200+ Tr\u00e1mites Completados'],
   secLbl:'Nuestros Servicios',
   secH2:'Todo lo que tu <span style="color:var(--teal)">embarcaci\u00f3n necesita</span>',
   secSub:'Gestionamos todos los tr\u00e1mites administrativos n\u00e1uticos para que t\u00fa te dediques a navegar.',
@@ -680,6 +685,43 @@ es:{
   tramH2:'Servicios <span style="color:var(--cyan-lt)">especializados</span> por \u00e1rea',
   tramSub:'Selecciona el servicio que necesitas para ver los tr\u00e1mites espec\u00edficos disponibles.',
   tabs:['RPMN','Importaci\u00f3n','Traducciones','CONANP','SEMAR','Permisos','Navegaci\u00f3n'],
+  panels:{
+    rpmn:[
+      {h:'Inscripciones',p:'Registro e inscripci\u00f3n de actos y documentos en el RPMN.'},
+      {h:'Actualizaciones',p:'Actualizaci\u00f3n de datos, matr\u00edculas y antecedentes registrales.'},
+      {h:'Actos Jur\u00eddicos',p:'Registro de contratos, grav\u00e1menes y dem\u00e1s actos jur\u00eddicos aplicables.'},
+      {h:'Certificaciones',p:'Expedici\u00f3n y certificaci\u00f3n de constancias y documentos inscritos.'}
+    ],
+    imp:[
+      {h:'Importaci\u00f3n temporal de embarcaciones',p:'Gesti\u00f3n completa: validaci\u00f3n documental y coordinaci\u00f3n con autoridades.'}
+    ],
+    trad:[
+      {h:'Traducciones por Perito Calificado',p:'Traducci\u00f3n oficial por perito certificado ante autoridades mar\u00edtimas y aduanales de M\u00e9xico.'}
+    ],
+    conanp:[
+      {h:'Autorizaciones y Pr\u00f3rrogas de Autorizaciones',p:'En las \u00c1reas Naturales Protegidas de Quintana Roo.'},
+      {h:'L\u00edmites de capacidad de carga',p:'Control y seguimiento de la capacidad de carga de cada zona protegida.'}
+    ],
+    semar:[
+      {h:'Acreditaci\u00f3n de Obra Viva',p:'Tr\u00e1mite para la acreditaci\u00f3n t\u00e9cnica de obra viva.'},
+      {h:'Certificados de Arqueo',p:'Gesti\u00f3n y expedici\u00f3n de certificados de arqueo.'},
+      {h:'Cuadernillos de Estabilidad',p:'Integraci\u00f3n, actualizaci\u00f3n y validaci\u00f3n de cuadernillos de estabilidad.'},
+      {h:'Arribos y Despachos',p:'Coordinaci\u00f3n de arribos y despachos ante la autoridad mar\u00edtima.'},
+      {h:'Matr\u00edculas y Abanderamiento',p:'Tr\u00e1mite integral de matr\u00edculas y abanderamiento.'},
+      {h:'Certificados o Constancia de Seguridad Mar\u00edtima',p:'Emisi\u00f3n y renovaci\u00f3n de certificados o constancia de seguridad mar\u00edtima.'},
+      {h:'Permisos de Turismo N\u00e1utico',p:'Gesti\u00f3n de permisos para operaci\u00f3n de turismo n\u00e1utico.'}
+    ],
+    perm:[
+      {h:'Permiso de Turismo N\u00e1utico',p:'Para operar servicios de turismo n\u00e1utico y actividades recreativas en el mar.'},
+      {h:'Jurisdicci\u00f3n de M\u00faltiples Capitan\u00edas',p:'Permiso de navegaci\u00f3n que abarca varias capitan\u00edas de puerto.'},
+      {h:'Permiso Dentro de una Capitan\u00eda',p:'Navegaci\u00f3n local dentro de la zona jurisdiccional de una sola capitan\u00eda.'}
+    ],
+    nav:[
+      {h:'Despacho de Embarcaciones Menores',p:'Gesti\u00f3n ante la Capitan\u00eda de Puerto correspondiente.'},
+      {h:'Autorizaci\u00f3n de Arribo',p:'Para puertos mexicanos y embarcaciones nacionales.'},
+      {h:'Autorizaci\u00f3n para Regatas',p:'Permisos para regatas, competencias n\u00e1uticas y eventos mar\u00edtimos.'}
+    ]
+  },
   benLbl:'Por qu\u00e9 elegirnos?',
   benH2:'Ventajas de trabajar con nosotros',
   benSub:'Combinamos experiencia, tecnolog\u00eda y atenci\u00f3n personalizada para ofrecerte el mejor servicio.',
@@ -717,7 +759,11 @@ es:{
   errs:['Campo requerido.','Correo no v\u00e1lido.','Selecciona un tipo.','Campo requerido.'],
   ftP:'Especialistas en tr\u00e1mites n\u00e1uticos en M\u00e9xico. M\u00e1s de 12 a\u00f1os ante SEMAR, CONANP, RPMN y Capitan\u00edas de Puerto en Quintana Roo.',
   ftCols:['Servicios','Empresa','Contacto'],
-  ftCopy:'\u00a9 2025 Soporte y Consultor\u00eda Mar\u00edtima. Todos los derechos reservados.',
+  ftLinks:{
+    services:['RPMN','Importaci\u00f3n','CONANP','SEMAR','Permisos'],
+    company:['Experiencia','Beneficios','Proceso','Contacto']
+  },
+  ftCopy:'\u00a9 2026 Soporte y Consultor\u00eda Mar\u00edtima. Todos los derechos reservados.',
   toast:['\u00a1Consulta enviada con \u00e9xito!','Le contactaremos en menos de 24 horas.'],
   hcard:['Embarcaciones Gestionadas','En Quintana Roo y el Caribe Mexicano']
 },
@@ -730,7 +776,7 @@ en:{
   heroBtn1:'<i class="fas fa-paper-plane"></i> Request Your Free Consultation \u2192',
   heroBtn2:'<i class="fas fa-compass"></i> View Services',
   heroNote:'<i class="fas fa-check-circle"></i> No commitment &nbsp;\u2022&nbsp; Response within 24 hours',
-  tbar:['Certified RPMN','Vessel Import','CONANP Permits','SEMAR Procedures','Navigation Permits','Quintana Roo'],
+  tbar:['Certified RPMN','Vessel Import','CONANP Permits','SEMAR Procedures','Navigation Permits','Quintana Roo','12+ Years of Experience','1,200+ Procedures Completed'],
   secLbl:'Our Services',
   secH2:'Everything your <span style="color:var(--teal)">vessel needs</span>',
   secSub:'We handle all nautical administrative procedures so you can focus on sailing.',
@@ -753,6 +799,43 @@ en:{
   tramH2:'<span style="color:var(--cyan-lt)">Specialized</span> services by area',
   tramSub:'Select the service you need to see the specific procedures available.',
   tabs:['RPMN','Import','Translations','CONANP','SEMAR','Permits','Navigation'],
+  panels:{
+    rpmn:[
+      {h:'Registrations',p:'Registration and filing of maritime acts and documents before the RPMN.'},
+      {h:'Updates',p:'Updates to records, vessel data and registry background information.'},
+      {h:'Legal Acts',p:'Registration of contracts, liens and other applicable legal acts.'},
+      {h:'Certifications',p:'Issuance and certification of registered records and documents.'}
+    ],
+    imp:[
+      {h:'Temporary Vessel Import',p:'Complete management, including document validation and coordination with the authorities.'}
+    ],
+    trad:[
+      {h:'Certified Expert Translations',p:'Official translations by a certified expert for Mexican maritime and customs authorities.'}
+    ],
+    conanp:[
+      {h:'Authorizations and Authorization Extensions',p:'For protected natural areas in Quintana Roo.'},
+      {h:'Carrying Capacity Limits',p:'Control and follow-up of carrying capacity limits for each protected zone.'}
+    ],
+    semar:[
+      {h:'Hull Accreditation',p:'Procedure for the technical accreditation of the vessel hull.'},
+      {h:'Tonnage Certificates',p:'Management and issuance of tonnage certificates.'},
+      {h:'Stability Booklets',p:'Preparation, updates and validation of stability booklets.'},
+      {h:'Arrivals and Clearances',p:'Coordination of vessel arrivals and clearances before the maritime authority.'},
+      {h:'Registration and Flagging',p:'Comprehensive management of vessel registration and flagging.'},
+      {h:'Maritime Safety Certificates or Records',p:'Issuance and renewal of maritime safety certificates or official records.'},
+      {h:'Nautical Tourism Permits',p:'Management of permits for nautical tourism operations.'}
+    ],
+    perm:[
+      {h:'Nautical Tourism Permit',p:'Required to operate nautical tourism services and recreational activities at sea.'},
+      {h:'Multiple Port Captaincies Jurisdiction',p:'Navigation permit covering multiple port captaincies.'},
+      {h:'Single Port Captaincy Permit',p:'Local navigation within the jurisdiction of a single port captaincy.'}
+    ],
+    nav:[
+      {h:'Small Craft Clearance',p:'Procedure handled before the corresponding Port Captaincy.'},
+      {h:'Arrival Authorization',p:'For Mexican ports and nationally registered vessels.'},
+      {h:'Regatta Authorization',p:'Permits for regattas, nautical competitions and maritime events.'}
+    ]
+  },
   benLbl:'Why choose us?',
   benH2:'Advantages of working with us',
   benSub:'We combine experience, technology and personalized attention to offer you the best service.',
@@ -790,7 +873,11 @@ en:{
   errs:['This field is required.','Invalid email.','Please select a type.','This field is required.'],
   ftP:'Specialists in nautical procedures in Mexico. Over 12 years before SEMAR, CONANP, RPMN and Port Authorities in Quintana Roo.',
   ftCols:['Services','Company','Contact'],
-  ftCopy:'\u00a9 2025 Soporte y Consultor\u00eda Mar\u00edtima. All rights reserved.',
+  ftLinks:{
+    services:['RPMN','Import','CONANP','SEMAR','Permits'],
+    company:['Experience','Benefits','Process','Contact']
+  },
+  ftCopy:'\u00a9 2026 Soporte y Consultor\u00eda Mar\u00edtima. All rights reserved.',
   toast:['Inquiry sent successfully!','We will contact you within 24 hours.'],
   hcard:['Vessels Managed','In Quintana Roo and the Mexican Caribbean']
 }
@@ -818,9 +905,9 @@ function applyLang(lang){
   var hn=q('.hero-note');if(hn)hn.innerHTML=d.heroNote;
 
   var ti=qa('.tbar-i');
-  for(var i=0;i<ti.length&&i<d.tbar.length;i++){
+  for(var i=0;i<ti.length;i++){
     var ic=ti[i].querySelector('i');
-    ti[i].innerHTML=(ic?ic.outerHTML+' ':'')+d.tbar[i];
+    ti[i].innerHTML=(ic?ic.outerHTML+' ':'')+d.tbar[i % d.tbar.length];
   }
 
   var sl=q('#servicios .lbl');
@@ -856,6 +943,17 @@ function applyLang(lang){
     var tsu=trs.querySelector('.sub');if(tsu)tsu.textContent=d.tramSub;
     var tabs=trs.querySelectorAll('.tb');
     for(var i=0;i<tabs.length&&i<d.tabs.length;i++){tabs[i].textContent=d.tabs[i];}
+    var panelIds=['rpmn','imp','trad','conanp','semar','perm','nav'];
+    for(var pi=0;pi<panelIds.length;pi++){
+      var panelId=panelIds[pi],panelData=d.panels&&d.panels[panelId],panelEl=document.getElementById(panelId);
+      if(!panelData||!panelEl)continue;
+      var cards=panelEl.querySelectorAll('.ic');
+      for(var ci=0;ci<cards.length&&ci<panelData.length;ci++){
+        var ph=cards[ci].querySelector('.ic-t h4'),pp=cards[ci].querySelector('.ic-t p');
+        if(ph)ph.textContent=panelData[ci].h;
+        if(pp)pp.textContent=panelData[ci].p;
+      }
+    }
   }
 
   var bns=q('#beneficios');
@@ -912,11 +1010,21 @@ function applyLang(lang){
 
   var fdp=q('.fd p');if(fdp)fdp.textContent=d.ftP;
   var fch=qa('.fco h5');for(var i=0;i<fch.length&&i<d.ftCols.length;i++){fch[i].textContent=d.ftCols[i];}
+  var fcos=qa('.fco');
+  if(fcos[0]&&d.ftLinks&&d.ftLinks.services){
+    var slinks=fcos[0].querySelectorAll('a');
+    for(var si=0;si<slinks.length&&si<d.ftLinks.services.length;si++){slinks[si].textContent=d.ftLinks.services[si];}
+  }
+  if(fcos[1]&&d.ftLinks&&d.ftLinks.company){
+    var clinks=fcos[1].querySelectorAll('a');
+    for(var ci2=0;ci2<clinks.length&&ci2<d.ftLinks.company.length;ci2++){clinks[ci2].textContent=d.ftLinks.company[ci2];}
+  }
   var fcp=q('.fb p');if(fcp)fcp.textContent=d.ftCopy;
   var tp=q('#toast p');if(tp)tp.innerHTML=d.toast[0]+'<span>'+d.toast[1]+'</span>';
   var hch=q('.hcard-foot h4');if(hch)hch.textContent=d.hcard[0];
   var hcp=q('.hcard-foot p');if(hcp)hcp.textContent=d.hcard[1];
   document.documentElement.lang=lang;
+  document.body.classList.toggle('is-en',lang==='en');
 }
 
 function toggleLang(){
