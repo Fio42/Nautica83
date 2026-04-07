@@ -48,19 +48,19 @@ button{font-family:'Inter',sans-serif;cursor:pointer}
 section[id],div[id]{scroll-margin-top:96px}
 
 /* NAV */
-#nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.985);backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,188,212,.12);height:82px;padding:0 1.4rem;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:1rem;transition:box-shadow .3s}
+#nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.985);backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,188,212,.12);height:82px;padding:0 1.4rem;display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr) auto;align-items:center;gap:1rem;transition:box-shadow .3s}
 #nav.scrolled{box-shadow:0 2px 20px rgba(10,50,70,.12)}
-.nav-logo{display:flex;align-items:center;gap:.65rem;font-family:'Playfair Display',serif;font-weight:700;font-size:.93rem;line-height:1.15;min-width:0;flex:0 1 auto}
+.nav-logo{display:flex;align-items:center;gap:.65rem;font-family:'Playfair Display',serif;font-weight:700;font-size:.93rem;line-height:1.15;min-width:0;flex:0 1 auto;max-width:420px}
 .nav-logo > div:last-child{min-width:0}
 .nav-icon{width:38px;height:38px;background:var(--hero-g);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;flex-shrink:0}
 .nl1{color:var(--navy);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nl2{color:var(--teal);font-size:.69rem;font-family:'Inter',sans-serif;font-weight:600;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.navlinks{display:flex;align-items:center;justify-content:center;gap:clamp(.6rem,.9vw,1rem);min-width:0}
+.navlinks{display:flex;align-items:center;justify-content:center;gap:clamp(.6rem,.9vw,1rem);min-width:0;flex:1 1 auto}
 .navlinks a{color:var(--muted);font-size:.78rem;font-weight:600;transition:color .2s;white-space:nowrap}
 .navlinks a:hover{color:var(--navy)}
 .btn-nav{background:var(--btn-g);color:#fff!important;padding:.55rem 1.05rem;border-radius:8px;font-weight:700!important;box-shadow:0 3px 12px rgba(11,188,212,.22);transition:all .2s!important;flex-shrink:0}
 .btn-nav:hover{opacity:.9;transform:translateY(-1px)}
-.nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:.7rem;min-width:max-content}
+.nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:.55rem;min-width:max-content;justify-self:end}
 .burger{display:none;background:none;border:none;color:var(--navy);font-size:1.4rem;padding:.3rem}
 .mob{display:none;flex-direction:column;position:fixed;top:82px;left:0;right:0;z-index:899;background:#fff;border-bottom:2px solid var(--cyan);box-shadow:0 8px 24px rgba(0,0,0,.1)}
 .mob.open{display:flex}
@@ -252,15 +252,15 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 #toast p span{color:var(--muted);font-size:.74rem;display:block;margin-top:.07rem}
 
 /* LANG TOGGLE */
-#lang-btn{display:inline-flex;align-items:center;justify-content:center;gap:.32rem;min-width:68px;height:36px;background:rgba(11,188,212,.08);border:1px solid rgba(11,188,212,.22);color:var(--teal);padding:0 .7rem;border-radius:9px;font-size:.74rem;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;letter-spacing:.04em;white-space:nowrap;flex-shrink:0;line-height:1;box-shadow:0 2px 10px rgba(10,50,70,.06)}
+#lang-btn{display:inline-flex;align-items:center;justify-content:center;gap:.35rem;width:72px;height:36px;background:rgba(11,188,212,.08);border:1px solid rgba(11,188,212,.22);color:var(--teal);padding:0 .7rem;border-radius:9px;font-size:.74rem;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;letter-spacing:.04em;white-space:nowrap;flex-shrink:0;line-height:1;box-shadow:0 2px 10px rgba(10,50,70,.06)}
 #lang-btn:hover{background:rgba(11,188,212,.16);border-color:var(--cyan);color:var(--navy)}
-#lang-btn .flag{font-size:.95rem}
-@media(max-width:768px){#lang-btn{min-width:58px;height:32px;padding:0 .55rem;font-size:.68rem;border-radius:8px}#lang-btn .flag{font-size:.82rem}}
+#lang-btn .flag{font-size:.8rem;font-weight:800;letter-spacing:0}
+@media(max-width:768px){#lang-btn{width:64px;height:32px;padding:0 .55rem;font-size:.68rem;border-radius:8px}#lang-btn .flag{font-size:.72rem}}
 
 /* RESPONSIVE */
-@media(max-width:1180px){#nav{grid-template-columns:auto auto}.navlinks{display:none}.burger{display:block}}
+@media(max-width:1180px){.navlinks{display:none}.burger{display:block}}
 @media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr 1fr}.pg{grid-template-columns:1fr 1fr}.pg::before{display:none}}
-@media(max-width:768px){section[id],div[id]{scroll-margin-top:78px}#nav{height:66px;padding:0 1rem;grid-template-columns:minmax(0,1fr) auto;gap:.65rem}.nav-logo{min-width:0;max-width:none}.nav-icon{width:34px;height:34px;border-radius:8px}.nl1{font-size:.86rem}.nl2{font-size:.64rem}.nav-actions{position:static;gap:.4rem;min-width:auto}.burger{padding:.15rem;font-size:1.15rem}.mob{top:66px}.hero{padding-top:66px}.navlinks{display:none}.burger{display:block}.hero-in{grid-template-columns:1fr}.hero-r{display:none}.exp-lay{grid-template-columns:1fr}.exp-img{height:260px}.ct-g{grid-template-columns:1fr;gap:2.5rem}.fr{grid-template-columns:1fr}.ft{grid-template-columns:1fr;gap:2rem}.pg{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr}}
+@media(max-width:768px){section[id],div[id]{scroll-margin-top:78px}#nav{height:66px;padding:0 1rem;padding-right:5rem;grid-template-columns:minmax(0,1fr);gap:.65rem}.nav-logo{min-width:0;max-width:none}.nav-icon{width:34px;height:34px;border-radius:8px}.nl1{font-size:.86rem}.nl2{font-size:.64rem}.nav-actions{position:fixed;top:17px;right:12px;gap:.4rem;z-index:950}.burger{padding:.15rem;font-size:1.15rem}.mob{top:66px}.hero{padding-top:66px}.navlinks{display:none}.burger{display:block}.hero-in{grid-template-columns:1fr}.hero-r{display:none}.exp-lay{grid-template-columns:1fr}.exp-img{height:260px}.ct-g{grid-template-columns:1fr;gap:2.5rem}.fr{grid-template-columns:1fr}.ft{grid-template-columns:1fr;gap:2rem}.pg{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr}}
 @media(max-width:520px){.grid3,.grid4{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.hero-btns{flex-direction:column}.exp-stats{gap:1.5rem}}
 </style>
 </head>
@@ -279,7 +279,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
     <a href="#contacto" class="btn-nav">Contactar</a>
   </div>
   <div class="nav-actions">
-    <button id="lang-btn" onclick="toggleLang()" aria-label="Switch language"><span class="flag">🇺🇸</span> EN</button>
+    <button id="lang-btn" onclick="toggleLang()" aria-label="Switch language"><span class="flag">US</span> EN</button>
     <button class="burger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
   </div>
 </nav>
@@ -352,7 +352,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         <div class="sc-body">
           <h3>RPMN</h3>
           <p>Registro Público Marítimo Nacional. Inscripción de embarcaciones, empresas navieras, matrículas y certificados.</p>
-          <a href="#tramites" class="sc-lnk" onclick="activateTab('rpmn')">Ver trámites <i class="fas fa-arrow-right"></i></a>
+          <a href="javascript:void(0)" class="sc-lnk" data-tab-link="rpmn">Ver trámites <i class="fas fa-arrow-right"></i></a>
         </div>
       </article>
       <article class="scard reveal" data-tab="imp" role="link" tabindex="0" style="transition-delay:0.04s">
@@ -363,7 +363,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         <div class="sc-body">
           <h3>Importación</h3>
           <p>Importación temporal de embarcaciones. Cumplimiento normativo completo.</p>
-          <a href="#tramites" class="sc-lnk" onclick="activateTab('imp')">Ver trámites <i class="fas fa-arrow-right"></i></a>
+          <a href="javascript:void(0)" class="sc-lnk" data-tab-link="imp">Ver trámites <i class="fas fa-arrow-right"></i></a>
         </div>
       </article>
       <article class="scard reveal" data-tab="trad" role="link" tabindex="0" style="transition-delay:0.08s">
@@ -374,7 +374,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         <div class="sc-body">
           <h3>Traducciones</h3>
           <p>Traducciones oficiales de documentos náuticos por perito traductor certificado ante autoridades marítimas.</p>
-          <a href="#tramites" class="sc-lnk" onclick="activateTab('trad')">Ver trámites <i class="fas fa-arrow-right"></i></a>
+          <a href="javascript:void(0)" class="sc-lnk" data-tab-link="trad">Ver trámites <i class="fas fa-arrow-right"></i></a>
         </div>
       </article>
       <article class="scard reveal" data-tab="conanp" role="link" tabindex="0" style="transition-delay:0.12s">
@@ -385,7 +385,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         <div class="sc-body">
           <h3>CONANP</h3>
           <p>Autorizaciones y prórrogas de autorizaciones en las Áreas Naturales Protegidas de Quintana Roo, con límites de capacidad de carga por zona protegida.</p>
-          <a href="#tramites" class="sc-lnk" onclick="activateTab('conanp')">Ver trámites <i class="fas fa-arrow-right"></i></a>
+          <a href="javascript:void(0)" class="sc-lnk" data-tab-link="conanp">Ver trámites <i class="fas fa-arrow-right"></i></a>
         </div>
       </article>
       <article class="scard reveal" data-tab="semar" role="link" tabindex="0" style="transition-delay:0.16s">
@@ -396,7 +396,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         <div class="sc-body">
           <h3>SEMAR</h3>
           <p>Certificados o constancia de seguridad marítima, acreditación de obra viva, certificados de arqueo, cuadernillos de estabilidad, arribos y despachos, matrículas y abanderamiento y permisos de turismo náutico.</p>
-          <a href="#tramites" class="sc-lnk" onclick="activateTab('semar')">Ver trámites <i class="fas fa-arrow-right"></i></a>
+          <a href="javascript:void(0)" class="sc-lnk" data-tab-link="semar">Ver trámites <i class="fas fa-arrow-right"></i></a>
         </div>
       </article>
       <article class="scard reveal" data-tab="perm" role="link" tabindex="0" style="transition-delay:0.24s">
@@ -407,10 +407,10 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         <div class="sc-body">
           <h3>Permisos</h3>
           <p>Permiso de turismo náutico, jurisdicción de múltiples capitanías y permisos dentro de una capitanía.</p>
-          <a href="#tramites" class="sc-lnk" onclick="activateTab('perm')">Ver trámites <i class="fas fa-arrow-right"></i></a>
+          <a href="javascript:void(0)" class="sc-lnk" data-tab-link="perm">Ver trámites <i class="fas fa-arrow-right"></i></a>
         </div>
       </article>
-      <article class="scard reveal" data-tab="nav" role="link" tabindex="0" style="transition-delay:0.28s">
+      <article class="scard reveal" data-tab="navproc" role="link" tabindex="0" style="transition-delay:0.28s">
         <div class="sc-img">
           <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=700&q=80&auto=format&fit=crop" alt="Veleros navegando - Despacho y permisos de navegación" loading="lazy"/>
           <div class="sc-ico"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MiA1MiI+CjxyZWN0IHdpZHRoPSI1MiIgaGVpZ2h0PSI1MiIgZmlsbD0iIzBhMmE0YSIgcng9IjEwIi8+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjE5IiBmaWxsPSJub25lIiBzdHJva2U9IiMwYmJjZDQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjIuNSIgZmlsbD0iIzIyZDNlZSIvPgo8cG9seWdvbiBwb2ludHM9IjI2LDkgMjgsMjMgMjYsMjIgMjQsMjMiIGZpbGw9IiNlZjQ0NDQiLz4KPHBvbHlnb24gcG9pbnRzPSIyNiw0MyAyOCwyOSAyNiwzMCAyNCwyOSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjgiLz4KPHBvbHlnb24gcG9pbnRzPSI5LDI2IDIzLDI0IDIyLDI2IDIzLDI4IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuOCIvPgo8cG9seWdvbiBwb2ludHM9IjQzLDI2IDI5LDI0IDMwLDI2IDI5LDI4IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuOCIvPgo8dGV4dCB4PSIyNiIgeT0iOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2VmNDQ0NCIgZm9udC1zaXplPSI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSJib2xkIj5OPC90ZXh0Pgo8dGV4dCB4PSIyNiIgeT0iNDkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmYiIGZvbnQtc2l6ZT0iNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iYm9sZCI+UzwvdGV4dD4KPHRleHQgeD0iNiIgeT0iMjkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmYiIGZvbnQtc2l6ZT0iNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXdlaWdodD0iYm9sZCI+VzwvdGV4dD4KPHRleHQgeD0iNDYiIHk9IjI5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIiBmb250LXNpemU9IjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9ImJvbGQiPkU8L3RleHQ+CjxjaXJjbGUgY3g9IjI2IiBjeT0iMjYiIHI9IjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyZDNlZSIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==" alt="badge"/></div>
@@ -418,7 +418,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         <div class="sc-body">
           <h3>Navegación</h3>
           <p>Despacho de embarcaciones menores, autorización de arribo y permisos para regatas y eventos náuticos.</p>
-          <a href="#tramites" class="sc-lnk" onclick="activateTab('nav')">Ver trámites <i class="fas fa-arrow-right"></i></a>
+          <a href="javascript:void(0)" class="sc-lnk" data-tab-link="navproc">Ver trámites <i class="fas fa-arrow-right"></i></a>
         </div>
       </article>
     </div>
@@ -454,7 +454,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
   <div class="wrap">
     <div class="reveal" style="margin-bottom:3rem">
       <div class="lbl"><i class="fas fa-file-alt"></i> Trámites Detallados</div>
-      <h2 class="h2">Catálogo completo de <span style="color:var(--teal)">servicios específicos</span></h2>
+      <h2 class="h2">Servicios especializados por área</h2>
       <p class="sub">Selecciona el área para ver todos los trámites que gestionamos ante las autoridades.</p>
     </div>
     <div class="reveal">
@@ -465,7 +465,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         <button class="tb"     onclick="showPanel('conanp',this)">CONANP</button>
         <button class="tb"     onclick="showPanel('semar',this)">SEMAR</button>
         <button class="tb"     onclick="showPanel('perm',this)">Permisos</button>
-        <button class="tb"     onclick="showPanel('nav',this)">Navegación</button>
+        <button class="tb"     onclick="showPanel('navproc',this)">Navegación</button>
       </div>
       <div class="panels">
         <div id="rpmn" class="panel on"><div class="ig">
@@ -499,7 +499,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
           <div class="ic"><div class="ic-i"><i class="fas fa-map-marked-alt"></i></div><div class="ic-t"><h4>Jurisdicción de Múltiples Capitanías</h4><p>Permiso de navegación que abarca varias capitanías de puerto.</p></div></div>
           <div class="ic"><div class="ic-i"><i class="fas fa-map-pin"></i></div><div class="ic-t"><h4>Permiso Dentro de una Capitanía</h4><p>Navegación local dentro de la zona jurisdiccional de una sola capitanía.</p></div></div>
         </div></div>
-        <div id="nav" class="panel"><div class="ig">
+        <div id="navproc" class="panel"><div class="ig">
           <div class="ic"><div class="ic-i"><i class="fas fa-route"></i></div><div class="ic-t"><h4>Despacho de Embarcaciones Menores</h4><p>Gestión ante la Capitanía de Puerto correspondiente.</p></div></div>
           <div class="ic"><div class="ic-i"><i class="fas fa-sign-in-alt"></i></div><div class="ic-t"><h4>Autorización de Arribo</h4><p>Para puertos mexicanos y embarcaciones nacionales.</p></div></div>
           <div class="ic"><div class="ic-i"><i class="fas fa-trophy"></i></div><div class="ic-t"><h4>Autorización para Regatas</h4><p>Permisos para regatas, competencias náuticas y eventos marítimos.</p></div></div>
@@ -626,7 +626,11 @@ function activateTab(id){
   setTimeout(()=>{
     const btns=document.querySelectorAll('.tb');
     btns.forEach(b=>{if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+id+"'"))showPanel(id,b)});
-    document.getElementById('tramites').scrollIntoView({behavior:'smooth'});
+    const tramites=document.getElementById('tramites');
+    const nav=document.getElementById('nav');
+    const navOffset=(nav?nav.offsetHeight:0)+12;
+    const top=tramites.getBoundingClientRect().top+window.pageYOffset-navOffset;
+    window.scrollTo({top,behavior:'smooth'});
   },80);
 }
 document.addEventListener('DOMContentLoaded',()=>{
@@ -636,7 +640,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     var tabId=card.getAttribute('data-tab');
     if(!tabId)return;
     card.addEventListener('click',function(e){
-      if(e.target.closest('.sc-lnk'))return;
+      if(e.target.closest('.sc-lnk')){e.preventDefault();activateTab(tabId);return;}
       activateTab(tabId);
     });
     card.addEventListener('keydown',function(e){
@@ -959,9 +963,9 @@ function applyLang(lang){
     var tsu=trs.querySelector('.sub');if(tsu)tsu.textContent=d.tramSub;
     var tabs=trs.querySelectorAll('.tb');
     for(var i=0;i<tabs.length&&i<d.tabs.length;i++){tabs[i].textContent=d.tabs[i];}
-    var panelIds=['rpmn','imp','trad','conanp','semar','perm','nav'];
+    var panelIds=['rpmn','imp','trad','conanp','semar','perm','navproc'];
     for(var pi=0;pi<panelIds.length;pi++){
-      var panelId=panelIds[pi],panelData=d.panels&&d.panels[panelId],panelEl=document.getElementById(panelId);
+      var panelId=panelIds[pi],panelKey=panelId==='navproc'?'nav':panelId,panelData=d.panels&&d.panels[panelKey],panelEl=document.getElementById(panelId);
       if(!panelData||!panelEl)continue;
       var cards=panelEl.querySelectorAll('.ic');
       for(var ci=0;ci<cards.length&&ci<panelData.length;ci++){
@@ -1047,7 +1051,7 @@ function toggleLang(){
   currentLang=currentLang==='es'?'en':'es';
   applyLang(currentLang);
   var btn=document.getElementById('lang-btn');
-  if(btn)btn.innerHTML=currentLang==='en'?'<span class="flag">🇲🇽</span> ES':'<span class="flag">🇺🇸</span> EN';
+  if(btn)btn.innerHTML=currentLang==='en'?'<span class="flag">MX</span> ES':'<span class="flag">US</span> EN';
   try{localStorage.setItem('preferredLang',currentLang);}catch(e){}
 }
 
@@ -1058,7 +1062,7 @@ document.addEventListener('DOMContentLoaded',function(){
   if(use==='en'){
     currentLang='en';applyLang('en');
     var btn=document.getElementById('lang-btn');
-    if(btn)btn.innerHTML='<span class="flag">🇲🇽</span> ES';
+    if(btn)btn.innerHTML='<span class="flag">MX</span> ES';
   }
 });
 </script>
