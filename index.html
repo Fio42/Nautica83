@@ -53,6 +53,7 @@ section[id],div[id]{scroll-margin-top:96px}
 .nav-logo{display:flex;align-items:center;justify-self:start;width:fit-content;gap:.65rem;font-family:'Playfair Display',serif;font-weight:700;font-size:.93rem;line-height:1.15;min-width:0;flex:0 1 auto;max-width:420px}
 .nav-logo > div:last-child{min-width:0}
 .nav-logo-img{width:48px;height:52px;object-fit:contain;flex-shrink:0}
+.footer-logo-img{width:48px;height:52px;object-fit:contain;flex-shrink:0}
 .nl1{color:var(--navy);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:1.18rem;letter-spacing:.03em}
 .nl2{color:var(--teal);font-size:.69rem;font-family:'Inter',sans-serif;font-weight:600;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .brand-mark{color:inherit;font-size:1.18em;font-weight:800;letter-spacing:.04em}
@@ -630,7 +631,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
   <div class="ft">
     <div class="fd">
       <div style="display:flex;align-items:center;gap:.65rem;margin-bottom:.7rem">
-        <div class="nav-icon"><i class="fas fa-anchor"></i></div>
+        <img class="footer-logo-img" src="assets/scm-logo-mark.png" alt="SCM">
         <div><div style="color:#fff;font-family:'Playfair Display',serif;font-weight:800;font-size:1.18rem;letter-spacing:.03em">SCM</div><div style="color:rgba(255,255,255,.65);font-size:.72rem;font-weight:600">Soporte y Consultoría Marítima</div></div>
       </div>
       <p>Especialistas en trámites náuticos en México. Más de 12 años gestionando procedimientos ante las autoridades correspondientes.</p>
@@ -715,7 +716,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-function submitForm(){
+async function submitForm(){
   const rules=[
     {id:'fn',err:'en',ok:v=>v.trim().length>1},
     {id:'fe',err:'ee',ok:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)},
@@ -729,6 +730,31 @@ function submitForm(){
     else{i.classList.remove('err');m.classList.remove('show')}
   });
   if(!valid)return;
+  var btn=document.querySelector('#contacto .btn-teal');
+  var oldBtn=btn?btn.innerHTML:'';
+  if(btn){btn.disabled=true;btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Enviando...';}
+  var fd=new FormData();
+  fd.append('Nombre',document.getElementById('fn').value.trim());
+  fd.append('Correo',document.getElementById('fe').value.trim());
+  fd.append('Telefono',document.getElementById('ft').value.trim());
+  fd.append('Tipo de tramite',document.getElementById('fs2').value);
+  fd.append('Mensaje',document.getElementById('fm').value.trim());
+  fd.append('_subject','Nueva consulta desde soportemaritimo.com');
+  fd.append('_template','table');
+  fd.append('_captcha','false');
+  try{
+    var res=await fetch('https://formsubmit.co/ajax/contacto@soportemaritimo.com',{
+      method:'POST',
+      headers:{'Accept':'application/json'},
+      body:fd
+    });
+    if(!res.ok)throw new Error('No se pudo enviar');
+  }catch(e){
+    if(btn){btn.disabled=false;btn.innerHTML=oldBtn;}
+    alert('No se pudo enviar la consulta. Por favor escríbanos a contacto@soportemaritimo.com.');
+    return;
+  }
+  if(btn){btn.disabled=false;btn.innerHTML=oldBtn;}
   ['fn','fe','ft','fm'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});
   var t=document.getElementById('toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show');},4500);
 }
