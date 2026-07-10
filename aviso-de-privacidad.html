@@ -15,8 +15,9 @@ html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--off);color:var(--text);line-height:1.72;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 #nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.985);backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,188,212,.12);height:82px;padding:0 1.4rem;display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr) auto;align-items:center;gap:1rem;box-shadow:0 2px 20px rgba(10,50,70,.12)}
-.nav-logo{display:flex;align-items:center;justify-self:start;width:fit-content;gap:.65rem;font-family:'Playfair Display',serif;font-weight:700;font-size:.93rem;line-height:1.15;min-width:0;max-width:420px}
-.nav-logo-img,.footer-logo-img{width:48px;height:52px;object-fit:contain;flex-shrink:0}
+.nav-logo{display:flex;align-items:center;justify-self:start;width:fit-content;min-width:0;max-width:300px}
+.nav-logo-img{width:230px;height:auto;max-height:58px;object-fit:contain;flex-shrink:0}
+.footer-logo-img{width:260px;height:auto;max-width:100%;object-fit:contain;flex-shrink:0}
 .nl1{color:var(--navy);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:1.18rem;letter-spacing:.03em}
 .nl2{color:var(--teal);font-size:.69rem;font-family:'Inter',sans-serif;font-weight:600;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .brand-mark{color:inherit;font-size:1.18em;font-weight:800;letter-spacing:.04em}
@@ -34,7 +35,6 @@ a{color:inherit;text-decoration:none}
 .hero{padding-top:82px;background:linear-gradient(120deg,#0b1d3a 0%,#10304f 36%,#0d5b72 72%,#1597b1 100%);color:#fff;position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:62px;background:var(--off);clip-path:ellipse(55% 100% at 50% 100%)}
 .hero-in{max-width:1120px;margin:0 auto;padding:4.5rem 1.5rem 5.5rem;position:relative;z-index:1}
-.eyebrow{display:inline-flex;align-items:center;gap:.45rem;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);border-radius:100px;padding:.3rem .85rem;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
 h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;letter-spacing:0;margin-bottom:1rem}
 .hero p{max-width:760px;color:rgba(255,255,255,.84);font-size:1rem}
 main{max-width:980px;margin:-2.5rem auto 0;padding:0 1.5rem 4rem;position:relative;z-index:2}
@@ -60,15 +60,14 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 .sb:hover{background:var(--teal);color:#fff}
 @media(max-width:1180px){.navlinks{display:none}.burger{display:block}}
 @media(max-width:1024px){.ft{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){#nav{height:66px;padding:0 1rem;padding-right:4rem;grid-template-columns:minmax(0,1fr)}.nav-logo{max-width:calc(100vw - 6rem);gap:.5rem}.nav-logo-img{width:39px;height:42px}.nl1{font-size:1rem}.nl2{font-size:.62rem}.nav-actions{position:fixed;top:17px;right:12px;z-index:950}.burger{padding:.15rem;font-size:1.15rem}.mob{top:66px}.hero{padding-top:66px}.ft{grid-template-columns:1fr;gap:2rem}.fb{align-items:flex-start;flex-direction:column}}
+@media(max-width:768px){#nav{height:66px;padding:0 1rem;padding-right:4rem;grid-template-columns:minmax(0,1fr)}.nav-logo{max-width:calc(100vw - 6rem)}.nav-logo-img{width:178px;max-height:46px}.nl1{font-size:1rem}.nl2{font-size:.62rem}.nav-actions{position:fixed;top:17px;right:12px;z-index:950}.burger{padding:.15rem;font-size:1.15rem}.mob{top:66px}.hero{padding-top:66px}.ft{grid-template-columns:1fr;gap:2rem}.fb{align-items:flex-start;flex-direction:column}}
 @media(max-width:520px){.notice{border-radius:10px}.hero-in{padding:3.5rem 1.2rem 4.8rem}main{padding-left:1rem;padding-right:1rem}}
 </style>
 </head>
 <body>
 <nav id="nav">
   <a href="index.html#inicio" class="nav-logo">
-    <img class="nav-logo-img" src="assets/scm-logo-mark.png" alt="SCM">
-    <div><span class="nl1"><span class="brand-mark">SCM</span></span><span class="nl2">Soporte y Consultoría Marítima</span></div>
+    <img class="nav-logo-img" src="assets/scm-logo-full.png" alt="SCM Soporte y Consultoría Marítima">
   </a>
   <div class="navlinks">
     <a href="index.html#servicios">Servicios</a>
@@ -92,7 +91,6 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 
 <section class="hero">
   <div class="hero-in">
-    <div class="eyebrow"><i class="fas fa-shield-halved"></i> Aviso legal</div>
     <h1>Aviso de Privacidad Integral</h1>
     <p>Documento aplicable a las personas que se comunican con SCM Soporte y Consultoría Marítima a través del formulario de contacto del sitio soportemaritimo.com.</p>
   </div>
@@ -172,8 +170,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
   <div class="ft">
     <div class="fd">
       <div style="display:flex;align-items:center;gap:.65rem;margin-bottom:.7rem">
-        <img class="footer-logo-img" src="assets/scm-logo-mark.png" alt="SCM">
-        <div><div style="color:#fff;font-family:'Playfair Display',serif;font-weight:800;font-size:1.18rem;letter-spacing:.03em">SCM</div><div style="color:rgba(255,255,255,.65);font-size:.72rem;font-weight:600">Soporte y Consultoría Marítima</div></div>
+        <img class="footer-logo-img" src="assets/scm-logo-full.png" alt="SCM Soporte y Consultoría Marítima">
       </div>
       <p>Especialistas en trámites náuticos en México. Más de 12 años gestionando procedimientos ante las autoridades correspondientes.</p>
     </div>
