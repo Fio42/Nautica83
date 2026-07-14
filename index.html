@@ -208,13 +208,19 @@ section[id],div[id]{scroll-margin-top:96px}
 .bc p{color:rgba(255,255,255,.7);font-size:.81rem;line-height:1.62}
 
 /* PROCESO */
-.proc-bg{background:var(--off)}
-.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative}
-.pg::before{content:'';position:absolute;top:2.1rem;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--teal),var(--cyan));opacity:.3}
-.ps{text-align:center;padding:0 .4rem}
-.pn{width:44px;height:44px;background:var(--btn-g);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:800;color:#fff;margin:0 auto 1.1rem;box-shadow:0 0 0 5px rgba(11,188,212,.12),0 4px 14px rgba(11,188,212,.35);position:relative;z-index:1}
-.ps h4{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.38rem}
-.ps p{color:var(--muted);font-size:.8rem;line-height:1.6}
+.proc-bg{background:linear-gradient(180deg,#f8fbfc 0%,var(--off) 100%)}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:1.15rem;position:relative}
+.pg::before{content:'';position:absolute;top:26px;left:12.5%;right:12.5%;height:1px;background:rgba(8,91,112,.2)}
+.ps{position:relative;min-height:205px;padding:4.75rem 1.15rem 1.25rem;text-align:center;border:1px solid transparent;border-radius:16px;background:rgba(255,255,255,.3);transition:background-color .35s ease,border-color .35s ease,box-shadow .35s ease;cursor:default}
+.ps:not(:last-child)::before{content:'';position:absolute;z-index:1;top:25px;left:50%;width:calc(100% + 1.15rem);height:2px;background:linear-gradient(90deg,var(--teal),var(--cyan));transform:scaleX(0);transform-origin:left center;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.pn{position:absolute;z-index:2;top:0;left:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;margin:0;border:1px solid rgba(8,91,112,.2);border-radius:50%;background:#fff;color:var(--teal);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:800;box-shadow:0 7px 22px rgba(5,44,65,.1);transform:translateX(-50%);transition:transform .4s cubic-bezier(.22,1,.36,1),background-color .3s ease,color .3s ease,border-color .3s ease,box-shadow .4s ease}
+.pn::after{content:'';position:absolute;inset:-7px;border:1px solid rgba(11,188,212,.28);border-radius:inherit;opacity:0;transform:scale(.82);transition:opacity .3s ease,transform .4s cubic-bezier(.22,1,.36,1)}
+.ps h4{font-family:'Inter',sans-serif;font-size:.93rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.55rem;letter-spacing:-.01em}
+.ps p{max-width:27ch;margin:0 auto;color:var(--muted);font-size:.79rem;line-height:1.7}
+.ps:hover{background:#fff;border-color:rgba(8,91,112,.12);box-shadow:0 18px 40px rgba(5,44,65,.09)}
+.ps:hover:not(:last-child)::before{transform:scaleX(1)}
+.ps:hover .pn{color:#fff;background:var(--teal);border-color:var(--teal);box-shadow:0 12px 28px rgba(8,91,112,.28);transform:translateX(-50%) translateY(-5px) scale(1.06)}
+.ps:hover .pn::after{opacity:1;transform:scale(1)}
 
 /* CONTACTO */
 .ct-bg{background:#fff}
@@ -279,9 +285,10 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 
 /* RESPONSIVE */
 @media(max-width:1180px){.navlinks{display:none}.burger{display:block}}
-@media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr 1fr}.pg{grid-template-columns:1fr 1fr}.pg::before{display:none}}
+@media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr 1fr}.pg{grid-template-columns:1fr 1fr}.pg::before,.ps:not(:last-child)::before{display:none}}
 @media(max-width:768px){section[id],div[id]{scroll-margin-top:78px}#nav{height:66px;padding:0 1rem;padding-right:5rem;grid-template-columns:minmax(0,1fr);gap:.65rem}.nav-logo{min-width:0;max-width:calc(100vw - 7rem)}.nav-logo-img{width:auto;height:46px;max-width:178px}.nl1{font-size:1rem}.nl2{font-size:.62rem}.nav-actions{position:fixed;top:17px;right:12px;gap:.4rem;z-index:950}.burger{padding:.15rem;font-size:1.15rem}.mob{top:66px}.hero{padding-top:66px}.navlinks{display:none}.burger{display:block}.hero-in{grid-template-columns:1fr}.hero-r{display:none}.exp-lay{grid-template-columns:1fr}.exp-img{height:260px}.ct-g{grid-template-columns:1fr;gap:2.5rem}.fr{grid-template-columns:1fr}.ft{grid-template-columns:1fr;gap:2rem}.pg{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr}.floating-contact-cta{right:1rem;bottom:1rem;min-height:52px;padding:.76rem .92rem;max-width:min(300px,calc(100vw - 1.25rem))}.floating-contact-label{font-size:.88rem}#toast{right:1rem;bottom:5.7rem;left:1rem}}
-@media(max-width:520px){.grid3,.grid4{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.hero-btns{flex-direction:column}.floating-contact-cta{left:1rem;right:1rem;justify-content:center}.floating-contact-copy{text-align:left}.floating-contact-label{white-space:normal}}
+@media(max-width:520px){.grid3,.grid4{grid-template-columns:1fr}.pg{grid-template-columns:1fr;gap:.75rem}.ps{min-height:0;padding:1.1rem 1rem 1.1rem 4.9rem;text-align:left}.pn{top:1.1rem;left:1rem;width:46px;height:46px;transform:none}.ps p{max-width:none;margin:0}.ps:hover .pn{transform:translateY(-3px) scale(1.04)}.hero-btns{flex-direction:column}.floating-contact-cta{left:1rem;right:1rem;justify-content:center}.floating-contact-copy{text-align:left}.floating-contact-label{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.ps,.ps::before,.pn,.pn::after{transition:none!important}}
 </style>
 </head>
 <body>
@@ -567,7 +574,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 
 <section class="section proc-bg" id="proceso">
   <div class="wrap">
-    <div class="reveal" style="text-align:center;max-width:530px;margin:0 auto 4rem">
+    <div class="reveal" style="text-align:center;max-width:530px;margin:0 auto 3rem">
       <div class="lbl">Cómo Trabajamos</div>
       <h2 class="h2">Proceso claro y transparente</h2>
       <p class="sub" style="margin:0 auto">Cuatro pasos para que tu trámite quede completamente resuelto.</p>
