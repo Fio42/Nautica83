@@ -175,12 +175,9 @@ section[id],div[id]{scroll-margin-top:96px}
 .exp-img{border-radius:18px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 0 1px rgba(11,188,212,.25),0 0 60px rgba(11,188,212,.12);height:440px;background:var(--teal-d);position:relative}
 .exp-img::after{content:'';position:absolute;inset:0;border-radius:18px;box-shadow:inset 0 0 0 1px rgba(11,188,212,.2);pointer-events:none}
 .exp-img img{width:100%;height:100%;object-fit:cover}
-.exp-c h2{font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;margin-bottom:1rem}
-.exp-c p{color:rgba(255,255,255,.83);font-size:.94rem;line-height:1.78;margin-bottom:.85rem}
-.exp-tenure{position:absolute;right:1.2rem;bottom:1.2rem;z-index:2;display:grid;gap:.16rem;min-width:220px;padding:1rem 1.15rem;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(8,21,41,.88);box-shadow:0 16px 36px rgba(0,0,0,.3);backdrop-filter:blur(12px);text-align:left}
-.exp-tenure-kicker{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-lt)}
-.exp-tenure strong{font-family:'Playfair Display',serif;font-size:1.55rem;line-height:1.15;color:#fff}
-.exp-tenure-detail{font-size:.72rem;color:rgba(255,255,255,.7)}
+.exp-c{max-width:560px}
+.exp-c h2{font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;margin-bottom:1.2rem;max-width:15ch}
+.exp-c p{color:rgba(255,255,255,.84);font-size:1rem;line-height:1.85;margin:0;max-width:52ch}
 
 /* TRÁMITES TABS */
 .tram-bg{background:#fff}
@@ -284,7 +281,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 @media(max-width:1180px){.navlinks{display:none}.burger{display:block}}
 @media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr 1fr}.pg{grid-template-columns:1fr 1fr}.pg::before{display:none}}
 @media(max-width:768px){section[id],div[id]{scroll-margin-top:78px}#nav{height:66px;padding:0 1rem;padding-right:5rem;grid-template-columns:minmax(0,1fr);gap:.65rem}.nav-logo{min-width:0;max-width:calc(100vw - 7rem)}.nav-logo-img{width:auto;height:46px;max-width:178px}.nl1{font-size:1rem}.nl2{font-size:.62rem}.nav-actions{position:fixed;top:17px;right:12px;gap:.4rem;z-index:950}.burger{padding:.15rem;font-size:1.15rem}.mob{top:66px}.hero{padding-top:66px}.navlinks{display:none}.burger{display:block}.hero-in{grid-template-columns:1fr}.hero-r{display:none}.exp-lay{grid-template-columns:1fr}.exp-img{height:260px}.ct-g{grid-template-columns:1fr;gap:2.5rem}.fr{grid-template-columns:1fr}.ft{grid-template-columns:1fr;gap:2rem}.pg{grid-template-columns:1fr 1fr}.ig{grid-template-columns:1fr}.floating-contact-cta{right:1rem;bottom:1rem;min-height:52px;padding:.76rem .92rem;max-width:min(300px,calc(100vw - 1.25rem))}.floating-contact-label{font-size:.88rem}#toast{right:1rem;bottom:5.7rem;left:1rem}}
-@media(max-width:520px){.grid3,.grid4{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.hero-btns{flex-direction:column}.exp-tenure{right:.8rem;bottom:.8rem;min-width:190px;padding:.82rem 1rem}.exp-tenure strong{font-size:1.35rem}.floating-contact-cta{left:1rem;right:1rem;justify-content:center}.floating-contact-copy{text-align:left}.floating-contact-label{white-space:normal}}
+@media(max-width:520px){.grid3,.grid4{grid-template-columns:1fr}.pg{grid-template-columns:1fr}.hero-btns{flex-direction:column}.floating-contact-cta{left:1rem;right:1rem;justify-content:center}.floating-contact-copy{text-align:left}.floating-contact-label{white-space:normal}}
 </style>
 </head>
 <body>
@@ -465,17 +462,11 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
     <div class="exp-lay reveal">
       <div class="exp-img">
         <img src="assets/experiencia-barco.png" alt="Yate en marina - Trámites marítimos" style="width:100%;height:100%;object-fit:cover">
-        <div class="exp-tenure" aria-label="Más de 12 años de experiencia en gestión marítima">
-          <span class="exp-tenure-kicker">Trayectoria comprobada</span>
-          <strong>Más de 12 años</strong>
-          <span class="exp-tenure-detail">en gestión marítima</span>
-        </div>
       </div>
       <div class="exp-c">
         <div class="lbl lbl-w">Nuestra Experiencia</div>
-        <h2>Más de una década gestionando trámites marítimos en México</h2>
+        <h2>Experiencia especializada en trámites marítimos en México</h2>
         <p>Somos un equipo de especialistas con profundo conocimiento de la legislación marítima mexicana y los procedimientos ante las autoridades correspondientes.</p>
-        <p>Hemos acompañado a propietarios de embarcaciones nacionales en cada paso, eliminando la burocracia para que solo disfrutes del mar en Quintana Roo.</p>
       </div>
     </div>
   </div>
@@ -556,7 +547,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 <section class="section ben-bg" id="beneficios">
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 3rem">
-      <div class="lbl lbl-w">Por qué elegirnos?</div>
+      <div class="lbl lbl-w">¿Por qué elegirnos?</div>
       <h2 class="h2 h2-w">Ventajas que nos distinguen</h2>
       <p class="sub sub-w" style="margin:0 auto">Más de una década demostrando que la gestión marítima puede ser eficiente y sin estrés.</p>
     </div>
@@ -648,9 +639,9 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
   </div>
 </footer>
 
-<a href="https://wa.me/529841419908" target="_blank" rel="noopener noreferrer" class="floating-contact-cta" id="floating-contact-cta" aria-label="Contactar a especialista por WhatsApp">
+<a href="#contacto" class="floating-contact-cta" id="floating-contact-cta" aria-label="Contactar a especialista">
   <span class="floating-contact-ico" aria-hidden="true">
-    <i class="fab fa-whatsapp"></i>
+    <i class="fas fa-envelope"></i>
   </span>
   <span class="floating-contact-copy">
     <span class="floating-contact-label">Contactar a especialista</span>
@@ -780,11 +771,9 @@ es:{
     {h:'Servicios Legales',p:'Asesor\u00eda legal, servicios notariales, elaboraci\u00f3n de contratos, blindaje jur\u00eddico para tu embarcaci\u00f3n y m\u00e1s.',lnk:'Ver tr\u00e1mites'}
   ],
   expLbl:'Nuestra Experiencia',
-  expH2:'M\u00e1s de 12 a\u00f1os gestionando tr\u00e1mites n\u00e1uticos en M\u00e9xico',
+  expH2:'Experiencia especializada en tr\u00e1mites mar\u00edtimos en M\u00e9xico',
   expP1:'Somos un equipo de especialistas con profundo conocimiento de la legislaci\u00f3n mar\u00edtima mexicana y los procedimientos ante las autoridades correspondientes.',
-  expP2:'Nuestra experiencia nos permite ofrecer tiempos de respuesta r\u00e1pidos y asesor\u00eda personalizada.',
   expBtn:'<i class="fas fa-paper-plane"></i> Iniciar Tr\u00e1mite',
-  tenure:{k:'Trayectoria comprobada',n:'M\u00e1s de 12 a\u00f1os',l:'en gesti\u00f3n mar\u00edtima'},
   tramLbl:'Tr\u00e1mites Detallados',
   tramH2:'Servicios especializados por \u00e1rea',
   tramSub:'Selecciona el servicio que necesitas para ver los tr\u00e1mites espec\u00edficos disponibles.',
@@ -836,7 +825,7 @@ es:{
       {h:'M\u00e1s servicios legales',p:'Atenci\u00f3n de necesidades jur\u00eddicas complementarias relacionadas con tu embarcaci\u00f3n.'}
     ]
   },
-  benLbl:'Por qu\u00e9 elegirnos?',
+  benLbl:'\u00bfPor qu\u00e9 elegirnos?',
   benH2:'Ventajas de trabajar con nosotros',
   benSub:'Combinamos experiencia, tecnolog\u00eda y atenci\u00f3n personalizada para ofrecerte el mejor servicio.',
   bcards:[
@@ -878,7 +867,7 @@ es:{
   },
   ftCopy:'\u00a9 2026 SCM Soporte y Consultor\u00eda Mar\u00edtima. Todos los derechos reservados.',
   toast:['\u00a1Consulta enviada con \u00e9xito!','Le contactaremos pronto.'],
-  floatingCta:['Contactar por WhatsApp'],
+  floatingCta:['Contactar a especialista'],
   hcard:['Embarcaciones Gestionadas','En Quintana Roo y el Caribe Mexicano']
 },
 en:{
@@ -905,11 +894,9 @@ en:{
     {h:'Legal Services',p:'Legal advice, notarial services, contract drafting, legal protection for your vessel and more.',lnk:'View procedures'}
   ],
   expLbl:'Our Experience',
-  expH2:'Over 12 years managing nautical procedures in Mexico',
+  expH2:'Specialized experience in maritime procedures in Mexico',
   expP1:'We are specialists with deep knowledge of Mexican maritime legislation and procedures before the corresponding authorities.',
-  expP2:'Our experience allows us to offer fast response times, personalized advice and punctual follow-up on every procedure.',
   expBtn:'<i class="fas fa-paper-plane"></i> Start a Procedure',
-  tenure:{k:'Proven track record',n:'Over 12 years',l:'in maritime management'},
   tramLbl:'Detailed Procedures',
   tramH2:'Specialized services by area',
   tramSub:'Select the service you need to see the specific procedures available.',
@@ -1003,7 +990,7 @@ en:{
   },
   ftCopy:'\u00a9 2026 SCM Soporte y Consultor\u00eda Mar\u00edtima. All rights reserved.',
   toast:['Inquiry sent successfully!','We will contact you soon.'],
-  floatingCta:['Contact us on WhatsApp'],
+  floatingCta:['Contact a specialist'],
   hcard:['Vessels Managed','In Quintana Roo and the Mexican Caribbean']
 }
 };
@@ -1051,14 +1038,8 @@ function applyLang(lang){
     var el=exs.querySelector('.lbl-w');if(el)el.textContent=d.expLbl;
     var eh=exs.querySelector('.exp-c h2');if(eh)eh.textContent=d.expH2;
     var eps=exs.querySelectorAll('.exp-c p');
-    if(eps[0])eps[0].textContent=d.expP1;if(eps[1])eps[1].textContent=d.expP2;
+    if(eps[0])eps[0].textContent=d.expP1;
     var eb=exs.querySelector('.btn-primary');if(eb)eb.innerHTML=d.expBtn;
-    var tenure=exs.querySelector('.exp-tenure');
-    if(tenure&&d.tenure){
-      var tk=tenure.querySelector('.exp-tenure-kicker'),tn=tenure.querySelector('strong'),td=tenure.querySelector('.exp-tenure-detail');
-      if(tk)tk.textContent=d.tenure.k;if(tn)tn.textContent=d.tenure.n;if(td)td.textContent=d.tenure.l;
-      tenure.setAttribute('aria-label',d.tenure.n+' '+d.tenure.l);
-    }
   }
 
   var trs=q('#tramites');
