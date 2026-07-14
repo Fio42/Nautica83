@@ -145,7 +145,6 @@ section[id],div[id]{scroll-margin-top:96px}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .tbar-i{display:inline-flex;align-items:center;gap:.55rem;color:rgba(255,255,255,.82);font-size:.8rem;font-weight:500;padding:0 2.2rem;white-space:nowrap;border-right:1px solid rgba(11,188,212,.2);height:100%}
 .tbar-i:last-child{border-right:none}
-.tbar-i i{color:var(--cyan-lt);font-size:.75rem}
 .tbar-dot{width:5px;height:5px;background:var(--cyan);border-radius:50%;opacity:.6;margin:0 .4rem;flex-shrink:0}
 
 /* SERVICE CARDS */
@@ -342,23 +341,21 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 
 <div class="tbar">
   <div class="tbar-track">
-    <div class="tbar-i"><i class="fas fa-anchor"></i> RPMN Certificado</div>
-    <div class="tbar-i"><i class="fas fa-ship"></i> Importación de Embarcaciones</div>
-    <div class="tbar-i"><i class="fas fa-leaf"></i> Permisos CONANP</div>
-    <div class="tbar-i"><i class="fas fa-star"></i> Trámites SEMAR</div>
-    <div class="tbar-i"><i class="fas fa-file-signature"></i> Permisos de Navegación</div>
-    <div class="tbar-i"><i class="fas fa-map-marker-alt"></i> Quintana Roo</div>
-    <div class="tbar-i"><i class="fas fa-shield-alt"></i> 12+ Años de Experiencia</div>
-    <div class="tbar-i"><i class="fas fa-check-circle"></i> 1,200+ Trámites Completados</div>
+    <div class="tbar-i">RPMN Certificado</div>
+    <div class="tbar-i">Importación de Embarcaciones</div>
+    <div class="tbar-i">Permisos CONANP</div>
+    <div class="tbar-i">Trámites SEMAR</div>
+    <div class="tbar-i">Permisos de Navegación</div>
+    <div class="tbar-i">Quintana Roo</div>
+    <div class="tbar-i">12+ Años de Experiencia</div>
     <!-- Duplicate for seamless loop -->
-    <div class="tbar-i"><i class="fas fa-anchor"></i> RPMN Certificado</div>
-    <div class="tbar-i"><i class="fas fa-ship"></i> Importación de Embarcaciones</div>
-    <div class="tbar-i"><i class="fas fa-leaf"></i> Permisos CONANP</div>
-    <div class="tbar-i"><i class="fas fa-star"></i> Trámites SEMAR</div>
-    <div class="tbar-i"><i class="fas fa-file-signature"></i> Permisos de Navegación</div>
-    <div class="tbar-i"><i class="fas fa-map-marker-alt"></i> Quintana Roo</div>
-    <div class="tbar-i"><i class="fas fa-shield-alt"></i> 12+ Años de Experiencia</div>
-    <div class="tbar-i"><i class="fas fa-check-circle"></i> 1,200+ Trámites Completados</div>
+    <div class="tbar-i">RPMN Certificado</div>
+    <div class="tbar-i">Importación de Embarcaciones</div>
+    <div class="tbar-i">Permisos CONANP</div>
+    <div class="tbar-i">Trámites SEMAR</div>
+    <div class="tbar-i">Permisos de Navegación</div>
+    <div class="tbar-i">Quintana Roo</div>
+    <div class="tbar-i">12+ Años de Experiencia</div>
   </div>
 </div>
 
@@ -767,7 +764,7 @@ es:{
   heroBtn1:'<i class="fas fa-paper-plane"></i> Solicita Tu Consulta \u2192',
   heroBtn2:'<i class="fas fa-compass"></i> Ver Servicios',
   heroNote:'<i class="fas fa-check-circle"></i> Sin compromiso',
-  tbar:['RPMN Certificado','Importaci\u00f3n de Embarcaciones','Permisos CONANP','Tr\u00e1mites SEMAR','Permisos de Navegaci\u00f3n','Quintana Roo','12+ A\u00f1os de Experiencia','1,200+ Tr\u00e1mites Completados'],
+  tbar:['RPMN Certificado','Importaci\u00f3n de Embarcaciones','Permisos CONANP','Tr\u00e1mites SEMAR','Permisos de Navegaci\u00f3n','Quintana Roo','12+ A\u00f1os de Experiencia'],
   secLbl:'Nuestros Servicios',
   secH2:'Todo lo que tu embarcaci\u00f3n necesita',
   secSub:'Gestionamos todos los tr\u00e1mites administrativos n\u00e1uticos para que t\u00fa te enfoques en navegar.',
@@ -892,7 +889,7 @@ en:{
   heroBtn1:'<i class="fas fa-paper-plane"></i> Request Your Consultation \u2192',
   heroBtn2:'<i class="fas fa-compass"></i> View Services',
   heroNote:'<i class="fas fa-check-circle"></i> No commitment',
-  tbar:['Certified RPMN','Vessel Import','CONANP Permits','SEMAR Procedures','Navigation Permits','Quintana Roo','12+ Years of Experience','1,200+ Procedures Completed'],
+  tbar:['Certified RPMN','Vessel Import','CONANP Permits','SEMAR Procedures','Navigation Permits','Quintana Roo','12+ Years of Experience'],
   secLbl:'Our Services',
   secH2:'Everything your vessel needs',
   secSub:'We handle all nautical administrative procedures so you can focus on sailing.',
@@ -1033,8 +1030,7 @@ function applyLang(lang){
 
   var ti=qa('.tbar-i');
   for(var i=0;i<ti.length;i++){
-    var ic=ti[i].querySelector('i');
-    ti[i].innerHTML=(ic?ic.outerHTML+' ':'')+d.tbar[i % d.tbar.length];
+    ti[i].textContent=d.tbar[i % d.tbar.length];
   }
 
   var sl=q('#servicios .lbl');
