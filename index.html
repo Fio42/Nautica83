@@ -223,8 +223,8 @@ section[id],div[id]{scroll-margin-top:96px}
 .ps:hover{background:#fff;border-color:rgba(8,91,112,.12);box-shadow:0 18px 40px rgba(5,44,65,.09)}
 .ps:hover:not(:last-child)::before{transform:scaleX(1)}
 .ps:hover .pn{color:#fff;background:var(--teal);border-color:var(--teal);box-shadow:0 12px 28px rgba(8,91,112,.28);transform:translateX(-50%) translateY(-5px) scale(1.06)}
-@keyframes stepPulse{0%{opacity:.9;transform:scale(.9)}60%{opacity:.34;transform:scale(1.38)}100%{opacity:0;transform:scale(1.58)}}
-@media(hover:hover){.ps:hover .pn::after{animation:stepPulse 1.25s cubic-bezier(.22,1,.36,1) infinite}}
+@keyframes stepPulse{0%{opacity:0;transform:scale(.9)}10%{opacity:.9;transform:scale(.97)}100%{opacity:0;transform:scale(1.58)}}
+@media(hover:hover){.ps:hover .pn::after{animation:stepPulse 1.12s linear infinite}}
 
 /* CONTACTO */
 .ct-bg{background:#fff}
