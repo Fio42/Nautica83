@@ -181,20 +181,23 @@ section[id],div[id]{scroll-margin-top:96px}
 
 /* TRÁMITES TABS */
 .tram-bg{background:#fff}
-.tabs-r{display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:2rem}
-.tb{background:var(--off2);border:1px solid var(--cborder);color:var(--muted);padding:.46rem 1.05rem;border-radius:7px;font-size:.81rem;font-weight:600;transition:all .22s;font-family:'Inter',sans-serif}
-.tb:hover{background:rgba(11,188,212,.1);border-color:rgba(11,188,212,.28);color:var(--teal)}
-.tb.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.tabs-r{display:flex;gap:1.45rem;flex-wrap:nowrap;margin-bottom:2.35rem;border-bottom:1px solid var(--cborder);overflow-x:auto;scrollbar-width:thin}
+.tb{flex:0 0 auto;background:transparent;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:.68rem .05rem .78rem;border-radius:0;font-size:.8rem;font-weight:600;transition:color .22s,border-color .22s;font-family:'Inter',sans-serif;cursor:pointer}
+.tb:hover{color:var(--teal)}
+.tb.on{border-bottom-color:var(--teal);color:var(--navy);font-weight:700}
+.tb:focus-visible{outline:2px solid rgba(11,188,212,.35);outline-offset:3px;border-radius:3px}
 .panels{position:relative}
 .panel{display:none;animation:fu .3s ease}
 .panel.on{display:block}
 @keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.ig{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem}
-.ic{background:var(--off);border:1px solid var(--cborder);border-radius:11px;padding:1rem 1.2rem;display:flex;align-items:flex-start;gap:.85rem;transition:border-color .25s,transform .25s}
-.ic:hover{border-color:rgba(11,188,212,.4);transform:translateX(3px)}
-.ic-i{width:34px;height:34px;min-width:34px;background:rgba(11,188,212,.09);border:1px solid rgba(11,188,212,.18);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:.82rem}
-.ic-t h4{font-size:.86rem;font-weight:600;color:var(--navy);margin-bottom:.12rem}
-.ic-t p{color:var(--muted);font-size:.75rem;line-height:1.5}
+.ig{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+.ic{position:relative;overflow:hidden;background:#fff;border:1px solid var(--cborder);border-radius:12px;padding:1.15rem 1.35rem 1.2rem;transition:border-color .28s,box-shadow .28s,transform .28s}
+.ic::before{content:'';position:absolute;top:0;bottom:0;left:0;width:3px;background:var(--teal);opacity:.28;transform:scaleY(.45);transform-origin:center;transition:opacity .28s,transform .35s cubic-bezier(.22,1,.36,1)}
+.ic:hover{border-color:rgba(8,91,112,.24);box-shadow:0 12px 28px rgba(5,44,65,.07);transform:translateY(-2px)}
+.ic:hover::before{opacity:1;transform:scaleY(1)}
+.ic-i{display:none}
+.ic-t h4{font-size:.87rem;font-weight:700;color:var(--navy);line-height:1.4;margin-bottom:.22rem;letter-spacing:-.005em}
+.ic-t p{max-width:62ch;color:var(--muted);font-size:.76rem;line-height:1.6}
 
 /* BENEFICIOS */
 .ben-bg{background:var(--navy)}
@@ -365,7 +368,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 <section class="section cards-bg" id="servicios">
   <div class="wrap">
     <div class="reveal" style="margin-bottom:3rem">
-      <div class="lbl"><i class="fas fa-anchor"></i> Nuestros Servicios</div>
+      <div class="lbl">Nuestros Servicios</div>
       <h2 class="h2">Todo lo que tu embarcación necesita</h2>
       <p class="sub">Gestionamos todos los trámites administrativos náuticos para que tú te enfoques en navegar.</p>
     </div>
@@ -484,7 +487,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 <section class="section tram-bg" id="tramites">
   <div class="wrap">
     <div class="reveal" style="margin-bottom:3rem">
-      <div class="lbl"><i class="fas fa-file-alt"></i> Trámites Detallados</div>
+      <div class="lbl">Trámites Detallados</div>
       <h2 class="h2">Servicios especializados por área</h2>
       <p class="sub">Selecciona el área para ver todos los trámites que gestionamos ante las autoridades.</p>
     </div>
@@ -1029,7 +1032,7 @@ function applyLang(lang){
   }
 
   var sl=q('#servicios .lbl');
-  if(sl){var ic=sl.querySelector('i');sl.innerHTML=(ic?ic.outerHTML+' ':'')+d.secLbl;}
+  if(sl)sl.textContent=d.secLbl;
   var sh=q('#servicios .h2');if(sh)sh.innerHTML=d.secH2;
   var ss=q('#servicios .sub');if(ss)ss.innerHTML=d.secSub;
   var sc=qa('.scard');
@@ -1051,7 +1054,7 @@ function applyLang(lang){
 
   var trs=q('#tramites');
   if(trs){
-    var tl=trs.querySelector('.lbl');if(tl){var ic3=tl.querySelector('i');tl.innerHTML=(ic3?ic3.outerHTML+' ':'')+d.tramLbl;}
+    var tl=trs.querySelector('.lbl');if(tl)tl.textContent=d.tramLbl;
     var th=trs.querySelector('.h2');if(th)th.innerHTML=d.tramH2;
     var tsu=trs.querySelector('.sub');if(tsu)tsu.textContent=d.tramSub;
     var tabs=trs.querySelectorAll('.tb');
