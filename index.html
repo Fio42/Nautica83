@@ -472,7 +472,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
         </div>
       </div>
       <div class="exp-c">
-        <div class="lbl lbl-w"><i class="fas fa-star"></i> Nuestra Experiencia</div>
+        <div class="lbl lbl-w">Nuestra Experiencia</div>
         <h2>Más de una década gestionando trámites marítimos en México</h2>
         <p>Somos un equipo de especialistas con profundo conocimiento de la legislación marítima mexicana y los procedimientos ante las autoridades correspondientes.</p>
         <p>Hemos acompañado a propietarios de embarcaciones nacionales en cada paso, eliminando la burocracia para que solo disfrutes del mar en Quintana Roo.</p>
@@ -556,7 +556,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 <section class="section ben-bg" id="beneficios">
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 3rem">
-      <div class="lbl lbl-w"><i class="fas fa-trophy"></i> Por qué elegirnos?</div>
+      <div class="lbl lbl-w">Por qué elegirnos?</div>
       <h2 class="h2 h2-w">Ventajas que nos distinguen</h2>
       <p class="sub sub-w" style="margin:0 auto">Más de una década demostrando que la gestión marítima puede ser eficiente y sin estrés.</p>
     </div>
@@ -577,7 +577,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 <section class="section proc-bg" id="proceso">
   <div class="wrap">
     <div class="reveal" style="text-align:center;max-width:530px;margin:0 auto 4rem">
-      <div class="lbl"><i class="fas fa-cogs"></i> Cómo Trabajamos</div>
+      <div class="lbl">Cómo Trabajamos</div>
       <h2 class="h2">Proceso claro y transparente</h2>
       <p class="sub" style="margin:0 auto">Cuatro pasos para que tu trámite quede completamente resuelto.</p>
     </div>
@@ -1048,7 +1048,7 @@ function applyLang(lang){
 
   var exs=q('#experiencia');
   if(exs){
-    var el=exs.querySelector('.lbl-w');if(el){var ic2=el.querySelector('i');el.innerHTML=(ic2?ic2.outerHTML+' ':'')+d.expLbl;}
+    var el=exs.querySelector('.lbl-w');if(el)el.textContent=d.expLbl;
     var eh=exs.querySelector('.exp-c h2');if(eh)eh.textContent=d.expH2;
     var eps=exs.querySelectorAll('.exp-c p');
     if(eps[0])eps[0].textContent=d.expP1;if(eps[1])eps[1].textContent=d.expP2;
@@ -1083,7 +1083,7 @@ function applyLang(lang){
 
   var bns=q('#beneficios');
   if(bns){
-    var bl=bns.querySelector('.lbl-w');if(bl){var ic4=bl.querySelector('i');bl.innerHTML=(ic4?ic4.outerHTML+' ':'')+d.benLbl;}
+    var bl=bns.querySelector('.lbl-w');if(bl)bl.textContent=d.benLbl;
     var bh=bns.querySelector('.h2-w');if(bh)bh.textContent=d.benH2;
     var bsu=bns.querySelector('.sub-w');if(bsu)bsu.textContent=d.benSub;
     var bcs=bns.querySelectorAll('.bc');
@@ -1095,7 +1095,7 @@ function applyLang(lang){
 
   var prs=q('#proceso');
   if(prs){
-    var pl=prs.querySelector('.lbl');if(pl){var ic5=pl.querySelector('i');pl.innerHTML=(ic5?ic5.outerHTML+' ':'')+d.procLbl;}
+    var pl=prs.querySelector('.lbl');if(pl)pl.textContent=d.procLbl;
     var ph=prs.querySelector('.h2');if(ph)ph.innerHTML=d.procH2;
     var psu=prs.querySelector('.sub');if(psu)psu.textContent=d.procSub;
     var pss=prs.querySelectorAll('.ps');
