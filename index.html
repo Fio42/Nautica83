@@ -217,14 +217,14 @@ section[id],div[id]{scroll-margin-top:96px}
 .ps{position:relative;min-height:205px;padding:4.75rem 1.15rem 1.25rem;text-align:center;border:1px solid transparent;border-radius:16px;background:rgba(255,255,255,.3);transition:background-color .35s ease,border-color .35s ease,box-shadow .35s ease;cursor:default}
 .ps:not(:last-child)::before{content:'';position:absolute;z-index:1;top:25px;left:50%;width:calc(100% + 1.15rem);height:2px;background:linear-gradient(90deg,var(--teal),var(--cyan));transform:scaleX(0);transform-origin:left center;transition:transform .45s cubic-bezier(.22,1,.36,1)}
 .pn{position:absolute;z-index:2;top:0;left:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;margin:0;border:1px solid rgba(8,91,112,.2);border-radius:50%;background:#fff;color:var(--teal);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:800;box-shadow:0 7px 22px rgba(5,44,65,.1);transform:translateX(-50%);transition:transform .4s cubic-bezier(.22,1,.36,1),background-color .3s ease,color .3s ease,border-color .3s ease,box-shadow .4s ease}
-.pn::after{content:'';position:absolute;inset:-6px;border:1px solid rgba(11,188,212,.38);border-radius:inherit;opacity:0;transform:scale(.88);pointer-events:none;will-change:transform,opacity}
+.pn::after{content:'';position:absolute;inset:-6px;border:2px solid rgba(34,211,238,.82);border-radius:inherit;opacity:0;transform:scale(.9);pointer-events:none;will-change:transform,opacity}
 .ps h4{font-family:'Inter',sans-serif;font-size:.93rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:.55rem;letter-spacing:-.01em}
 .ps p{max-width:27ch;margin:0 auto;color:var(--muted);font-size:.79rem;line-height:1.7}
 .ps:hover{background:#fff;border-color:rgba(8,91,112,.12);box-shadow:0 18px 40px rgba(5,44,65,.09)}
 .ps:hover:not(:last-child)::before{transform:scaleX(1)}
 .ps:hover .pn{color:#fff;background:var(--teal);border-color:var(--teal);box-shadow:0 12px 28px rgba(8,91,112,.28);transform:translateX(-50%) translateY(-5px) scale(1.06)}
-@keyframes stepPulse{0%{opacity:.42;transform:scale(.88)}65%{opacity:.12;transform:scale(1.3)}100%{opacity:0;transform:scale(1.42)}}
-@media(hover:hover){.ps:hover .pn::after{animation:stepPulse 1.55s ease-out infinite}}
+@keyframes stepPulse{0%{opacity:.9;transform:scale(.9)}60%{opacity:.34;transform:scale(1.38)}100%{opacity:0;transform:scale(1.58)}}
+@media(hover:hover){.ps:hover .pn::after{animation:stepPulse 1.25s cubic-bezier(.22,1,.36,1) infinite}}
 
 /* CONTACTO */
 .ct-bg{background:#fff}
