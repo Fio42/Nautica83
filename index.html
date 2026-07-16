@@ -265,7 +265,7 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
 .sb:hover{background:rgba(255,255,255,.15);color:#fff}
 
 /* TOAST */
-#toast{position:fixed;bottom:2rem;right:2rem;z-index:9999;background:#fff;border:1px solid rgba(11,188,212,.2);border-radius:12px;padding:.95rem 1.4rem;display:flex;align-items:center;gap:.9rem;box-shadow:0 14px 40px rgba(10,50,70,.16);transform:translateY(100px);opacity:0;transition:all .45s cubic-bezier(.23,1,.32,1)}
+#toast{position:fixed;bottom:2rem;right:2rem;z-index:9999;background:#fff;border:1px solid rgba(11,188,212,.2);border-radius:12px;padding:.95rem 1.4rem;display:flex;align-items:center;gap:.9rem;box-shadow:0 14px 40px rgba(10,50,70,.16);transform:translateY(100px);opacity:0;pointer-events:none;transition:all .45s cubic-bezier(.23,1,.32,1)}
 #toast.show{transform:none;opacity:1}
 .ti{width:32px;height:32px;background:rgba(16,185,129,.12);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#10b981}
 #toast p{font-size:.86rem;color:var(--text)}
@@ -650,12 +650,12 @@ footer{background:var(--navy);padding:4rem 2rem 2rem}
   </div>
 </footer>
 
-<a href="#contacto" class="floating-contact-cta" id="floating-contact-cta" aria-label="Contactar a especialista">
+<a href="#contacto" class="floating-contact-cta" id="floating-contact-cta" aria-label="Contáctanos">
   <span class="floating-contact-ico" aria-hidden="true">
     <i class="fas fa-envelope"></i>
   </span>
   <span class="floating-contact-copy">
-    <span class="floating-contact-label">Contactar a especialista</span>
+    <span class="floating-contact-label">Contáctanos</span>
   </span>
 </a>
 
@@ -878,7 +878,7 @@ es:{
   },
   ftCopy:'\u00a9 2026 SCM Soporte y Consultor\u00eda Mar\u00edtima. Todos los derechos reservados.',
   toast:['\u00a1Consulta enviada con \u00e9xito!','Le contactaremos pronto.'],
-  floatingCta:['Contactar a especialista'],
+  floatingCta:['Contáctanos'],
   hcard:['Embarcaciones Gestionadas','En Quintana Roo y el Caribe Mexicano']
 },
 en:{
@@ -1001,7 +1001,7 @@ en:{
   },
   ftCopy:'\u00a9 2026 SCM Soporte y Consultor\u00eda Mar\u00edtima. All rights reserved.',
   toast:['Inquiry sent successfully!','We will contact you soon.'],
-  floatingCta:['Contact a specialist'],
+  floatingCta:['Contact us'],
   hcard:['Vessels Managed','In Quintana Roo and the Mexican Caribbean']
 }
 };
