@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /Backups/
+Disallow: /.edge-headless/
+
+Sitemap: https://soportemaritimo.com/sitemap.xml
