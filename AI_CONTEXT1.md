@@ -149,7 +149,7 @@ git push -u origin main
 - [ ] Add real WhatsApp link: `href="https://wa.me/529981234567"`
 - [ ] Add Google Analytics or similar
 - [ ] Consider adding a testimonials/reviews section
-- [ ] Add real social media profile URLs (Facebook, Instagram, LinkedIn)
+- [ ] Add real social media profile URLs (Facebook, Instagram)
 - [ ] Consider multilingual version (EN/ES) for foreign boat owners
 
 ---
