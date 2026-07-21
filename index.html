@@ -1224,19 +1224,35 @@ document.addEventListener('DOMContentLoaded',function(){
     var revealHeroVideo=function(){
       heroBg.classList.add('video-ready');
     };
+    var playHeroVideo=function(){
+      try{
+        var playPromise=heroVideo.play();
+        if(playPromise&&typeof playPromise.then==='function'){
+          playPromise.then(revealHeroVideo).catch(function(){
+            heroBg.classList.remove('video-ready');
+          });
+        }
+      }catch(e){}
+    };
     heroVideo.addEventListener('loadeddata',revealHeroVideo,{once:true});
     heroVideo.addEventListener('canplay',revealHeroVideo,{once:true});
     heroVideo.addEventListener('error',function(){
       heroBg.classList.remove('video-ready');
     });
-    try{
-      var playPromise=heroVideo.play();
-      if(playPromise&&typeof playPromise.then==='function'){
-        playPromise.then(revealHeroVideo).catch(function(){
-          heroBg.classList.remove('video-ready');
-        });
+    playHeroVideo();
+    if('IntersectionObserver' in window){
+      var heroSection=document.querySelector('.hero');
+      if(heroSection){
+        var heroVideoObserver=new IntersectionObserver(function(entries){
+          if(entries[0].isIntersecting){
+            playHeroVideo();
+          }else{
+            heroVideo.pause();
+          }
+        },{threshold:0.01});
+        heroVideoObserver.observe(heroSection);
       }
-    }catch(e){}
+    }
   }
 
   var saved=null;try{saved=localStorage.getItem('preferredLang');}catch(e){}
