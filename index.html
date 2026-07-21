@@ -150,6 +150,7 @@ section[id],div[id]{scroll-margin-top:96px}
 .tbar-track{display:flex;align-items:center;height:100%;animation:ticker 28s linear infinite;width:max-content}
 .tbar-track:hover{animation-play-state:paused}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.tbar-group{display:flex;align-items:center;justify-content:space-around;flex:0 0 auto;min-width:100vw;height:100%}
 .tbar-i{display:inline-flex;align-items:center;gap:.55rem;color:rgba(255,255,255,.82);font-size:.8rem;font-weight:500;padding:0 2.2rem;white-space:nowrap;border-right:1px solid rgba(11,188,212,.2);height:100%}
 .tbar-i:last-child{border-right:none}
 .tbar-dot{width:5px;height:5px;background:var(--cyan);border-radius:50%;opacity:.6;margin:0 .4rem;flex-shrink:0}
@@ -390,19 +391,23 @@ body,#nav,.mob,.scard,.ic,.ps,.pn,.fc,.fg input,.fg select,.fg textarea,#toast,.
 
 <div class="tbar">
   <div class="tbar-track">
-    <div class="tbar-i">RPMN Certificado</div>
-    <div class="tbar-i">Importación de Embarcaciones</div>
-    <div class="tbar-i">Permisos CONANP</div>
-    <div class="tbar-i">Trámites SEMAR</div>
-    <div class="tbar-i">Permisos de Navegación</div>
-    <div class="tbar-i">Quintana Roo</div>
-    <!-- Duplicate for seamless loop -->
-    <div class="tbar-i">RPMN Certificado</div>
-    <div class="tbar-i">Importación de Embarcaciones</div>
-    <div class="tbar-i">Permisos CONANP</div>
-    <div class="tbar-i">Trámites SEMAR</div>
-    <div class="tbar-i">Permisos de Navegación</div>
-    <div class="tbar-i">Quintana Roo</div>
+    <div class="tbar-group">
+      <div class="tbar-i">RPMN Certificado</div>
+      <div class="tbar-i">Importación de Embarcaciones</div>
+      <div class="tbar-i">Permisos CONANP</div>
+      <div class="tbar-i">Trámites SEMAR</div>
+      <div class="tbar-i">Permisos de Navegación</div>
+      <div class="tbar-i">Quintana Roo</div>
+    </div>
+    <!-- Duplicate group for seamless loop -->
+    <div class="tbar-group" aria-hidden="true">
+      <div class="tbar-i">RPMN Certificado</div>
+      <div class="tbar-i">Importación de Embarcaciones</div>
+      <div class="tbar-i">Permisos CONANP</div>
+      <div class="tbar-i">Trámites SEMAR</div>
+      <div class="tbar-i">Permisos de Navegación</div>
+      <div class="tbar-i">Quintana Roo</div>
+    </div>
   </div>
 </div>
 
